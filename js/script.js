@@ -267,7 +267,7 @@ function initLookbookInteractions() {
   const lookItems = document.querySelectorAll(".lookbook-item");
   lookItems.forEach((item, index) => {
     item.addEventListener("click", () => {
-      window.location.href = "collections.html";
+      window.location.href = "404.html";
     });
   });
 }
