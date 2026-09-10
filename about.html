@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Atelier Story &amp; Heritage — VÉRITÉ ATELIER</title>
+  <meta name="description" content="Discover the origins, noble craftsmanship, and sustainability pledge of Vérité Atelier.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+  <div class="top-announcement">
+    <span>Complimentary worldwide delivery on orders over $300 &bull; Use code <a href="shop.html">STYLE10</a> for 10% off</span>
+  </div>
+
+  <header class="site-header">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/stackly-logo.webp" alt="STACKLY" class="brand-logo-img">
+      </a>
+
+      <nav class="nav-links-desktop" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="women.html" class="nav-link">Women</a>
+        <a href="men.html" class="nav-link">Men</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="action-btn search-trigger-btn" aria-label="Open Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <a href="wishlist.html" class="action-btn" aria-label="View Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-count wishlist-count-badge">0</span>
+        </a>
+
+        <a href="cart.html" class="action-btn" aria-label="View Shopping Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge-count cart-count-badge">0</span>
+        </a>
+
+        <a href="login.html" class="login-nav-btn">Login</a>
+
+        <button class="hamburger-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/stackly-logo.webp" alt="STACKLY" class="brand-logo-img">
+        </a>
+        <button class="modal-close-btn mobile-nav-close" aria-label="Close Menu">&times;</button>
+      </div>
+
+      <div class="mobile-drawer-search-wrap">
+        <form class="mobile-drawer-search-form" onsubmit="event.preventDefault(); const q = this.querySelector('input').value; window.location.href='shop.html?search=' + encodeURIComponent(q);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" placeholder="Search catalog..." required>
+        </form>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home <span>&rarr;</span></a>
+        <a href="about.html" class="mobile-nav-link active">About Us <span>&rarr;</span></a>
+        <a href="shop.html" class="mobile-nav-link">Shop Catalog <span>&rarr;</span></a>
+        <a href="women.html" class="mobile-nav-link">Women's Collection <span>&rarr;</span></a>
+        <a href="men.html" class="mobile-nav-link">Men's Collection <span>&rarr;</span></a>
+        <a href="collections.html" class="mobile-nav-link">Editorial Collections <span>&rarr;</span></a>
+        <a href="contact.html" class="mobile-nav-link">Contact Concierge <span>&rarr;</span></a>
+      </nav>
+
+      <div class="mobile-nav-footer">
+        <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+        <a href="user-dashboard.html" class="btn btn-secondary" style="width: 100%;">My Account</a>
+      </div>
+
+      <div class="mobile-drawer-contact-info">
+        <div class="mobile-drawer-contact-title">Direct Atelier Access</div>
+        <div class="mobile-drawer-contact-item">
+          <span>Call:</span>
+          <a href="tel:+18005557233">+1 (800) 555-SAFE</a>
+        </div>
+        <div class="mobile-drawer-contact-item">
+          <span>Email:</span>
+          <a href="mailto:concierge@stackly.com">concierge@stackly.com</a>
+        </div>
+        <div class="mobile-drawer-contact-item">
+          <span>Salons:</span>
+          <span>Paris &bull; Milan &bull; NYC &bull; London</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="search-modal">
+    <div class="search-modal-container">
+      <button class="modal-close-btn search-modal-close">&times;</button>
+      <div class="search-input-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" class="search-input-field" placeholder="Search products, collections, cashmere...">
+      </div>
+      <div class="search-results-preview"></div>
+    </div>
+  </div>
+
+  <!-- Hero Header -->
+  <section class="section-spacing" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-light);">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="eyebrow">Our Heritage</span>
+        <h1 class="heading-xl">Quiet Luxury &bull; Radical Sincerity.</h1>
+        <p class="hero-desc">
+          Founded in the 8th arrondissement of Paris, STACKLY Vérité Atelier emerged from a singular conviction: that true luxury lies not in fleeting logos, but in noble raw materials, architectural cuts, and multi-generational European craftsmanship.
+        </p>
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#artisans" class="btn btn-primary">Meet Our Artisans</a>
+          <a href="#journey" class="btn btn-secondary">Bespoke Process</a>
+        </div>
+      </div>
+      <div style="aspect-ratio: 4/5; overflow: hidden; border-radius: 4px; box-shadow: 0 15px 35px rgba(0,0,0,0.08);">
+        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Vérité Atelier Heritage" style="width: 100%; height: 100%; object-fit: cover;">
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Milestones Strip -->
+  <section style="background: var(--bg-card); border-bottom: 1px solid var(--border-light); padding: 3rem 0;">
+    <div class="container">
+      <div class="trust-badges-strip" style="background: transparent; border: none; padding: 0;">
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">100%</div>
+          <div style="font-size: 0.875rem; font-weight: 600; color: var(--text-main);">Traceable Origin</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Single-source European mills</div>
+        </div>
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">38+</div>
+          <div style="font-size: 0.875rem; font-weight: 600; color: var(--text-main);">Hours Per Coat</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Hand-stitched bespoke tailoring</div>
+        </div>
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">0%</div>
+          <div style="font-size: 0.875rem; font-weight: 600; color: var(--text-main);">Deadstock Waste</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Limited numbered editions</div>
+        </div>
+        <div style="text-align: center; padding: 1rem;">
+          <div style="font-family: var(--font-serif); font-size: 2.25rem; font-weight: 700; color: var(--accent); margin-bottom: 0.25rem;">4</div>
+          <div style="font-size: 0.875rem; font-weight: 600; color: var(--text-main);">Global Flagships</div>
+          <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.2rem;">Paris, Milan, Tokyo, New York</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materials & Provenance Section -->
+  <section class="section-spacing" id="provenance">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">Textile Provenance</span>
+        <h2 class="heading-lg">Noble Natural Fibres</h2>
+        <p class="lead-text" style="margin: 0.75rem auto 0;">We source exclusively from historic family mills across Italy, France, and Scotland.</p>
+      </div>
+
+      <div class="provenance-grid">
+        <div class="provenance-card">
+          <span class="provenance-origin-badge">Biella, Italy</span>
+          <h3 class="provenance-title">Virgin Merino Wool</h3>
+          <p class="provenance-text">
+            Milled by 4th generation weavers using sub-alpine spring water. Unmatched thermoregulation, natural crease recovery, and signature drape.
+          </p>
+        </div>
+
+        <div class="provenance-card">
+          <span class="provenance-origin-badge">Como, Italy</span>
+          <h3 class="provenance-title">22-Momme Mulberry Silk</h3>
+          <p class="provenance-text">
+            Spun on heritage shuttle looms on the banks of Lake Como. Lustrous liquid sheen, hypoallergenic softness, and featherlight breathability.
+          </p>
+        </div>
+
+        <div class="provenance-card">
+          <span class="provenance-origin-badge">Normandy, France</span>
+          <h3 class="provenance-title">Organic Long-Staple Flax</h3>
+          <p class="provenance-text">
+            Dew-retted coastal flax cultivated without synthetic chemicals. Naturally antibacterial, cooling, and grows softer with every wear.
+          </p>
+        </div>
+
+        <div class="provenance-card">
+          <span class="provenance-origin-badge">Tuscany, Italy</span>
+          <h3 class="provenance-title">Vegetable-Tanned Leather</h3>
+          <p class="provenance-text">
+            Tanned using chestnut and mimosa bark tannins over 40 days. Free from toxic heavy metals and develops a rich, individual patina over decades.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Artisans Section -->
+  <section class="section-spacing" id="artisans" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">Creative Direction</span>
+        <h2 class="heading-lg">The Hands Behind the Cut</h2>
+        <p class="lead-text" style="margin: 0.75rem auto 0;">Meet the master tailors, patternmakers, and archivists sculpting each silhouette.</p>
+      </div>
+
+      <div class="artisan-grid">
+        <div class="artisan-card">
+          <div class="artisan-img-wrap">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Marcella Bianchi, Master Tailor" loading="lazy">
+          </div>
+          <div class="artisan-body">
+            <span class="artisan-role">Head of Bespoke Tailoring</span>
+            <h3 class="artisan-name">Marcella Bianchi</h3>
+            <p class="artisan-quote">"A well-cut coat does not disguise the body; it grants the wearer effortless architectural poise."</p>
+            <p style="font-size: 0.8125rem; color: var(--text-light); margin-top: auto;">32 Years in Savile Row &amp; Via Montenapoleone ateliers.</p>
+          </div>
+        </div>
+
+        <div class="artisan-card">
+          <div class="artisan-img-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Henri Laurent, Creative Director" loading="lazy">
+          </div>
+          <div class="artisan-body">
+            <span class="artisan-role">Creative Director</span>
+            <h3 class="artisan-name">Henri Laurent</h3>
+            <p class="artisan-quote">"We design for the collector who values understated permanence over the hysteria of seasonal micro-trends."</p>
+            <p style="font-size: 0.8125rem; color: var(--text-light); margin-top: auto;">Former lead designer at Chambre Syndicale de la Haute Couture.</p>
+          </div>
+        </div>
+
+        <div class="artisan-card">
+          <div class="artisan-img-wrap">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Dr. Elena Vance, Textile Archivist" loading="lazy">
+          </div>
+          <div class="artisan-body">
+            <span class="artisan-role">Textile Archivist &amp; Sourcing</span>
+            <h3 class="artisan-name">Dr. Elena Vance</h3>
+            <p class="artisan-quote">"True luxury is radically transparent. You should know the exact pasture and mill where your garment was born."</p>
+            <p style="font-size: 0.8125rem; color: var(--text-light); margin-top: auto;">PhD in Historical Textiles, Central Saint Martins.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Bespoke 4-Step Journey -->
+  <section class="section-spacing" id="journey">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">Artisan Method</span>
+        <h2 class="heading-lg">The 4-Step Sartorial Journey</h2>
+        <p class="lead-text" style="margin: 0.75rem auto 0;">Every tailored garment undergoes a meticulous, unhurried creation cycle.</p>
+      </div>
+
+      <div class="journey-steps-grid">
+        <div class="journey-step-card">
+          <div class="journey-step-num">01</div>
+          <h3 class="journey-step-title">Silhouette Study</h3>
+          <p class="journey-step-desc">
+            Personal measurement profile capturing 28 distinct biometric angles to engineer an exact anatomical fit.
+          </p>
+        </div>
+
+        <div class="journey-step-card">
+          <div class="journey-step-num">02</div>
+          <h3 class="journey-step-title">Muslin Prototype</h3>
+          <p class="journey-step-desc">
+            Hand-drafted canvas prototype built to test stance, posture balance, and natural movement before cutting the final cloth.
+          </p>
+        </div>
+
+        <div class="journey-step-card">
+          <div class="journey-step-num">03</div>
+          <h3 class="journey-step-title">Hand-Canvasing</h3>
+          <p class="journey-step-desc">
+            Over 1,200 hand stitches secure the floating horsehair chest canvas, allowing the jacket to mould perfectly to your chest.
+          </p>
+        </div>
+
+        <div class="journey-step-card">
+          <div class="journey-step-num">04</div>
+          <h3 class="journey-step-title">Archival Handover</h3>
+          <p class="journey-step-desc">
+            Final steam press, horn button attachment, hand-embroidered provenance tag, and delivery in breathable cotton garment cases.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Flagships Section -->
+  <section class="section-spacing" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">Flagship Boutiques</span>
+        <h2 class="heading-lg">Visit Our Atelier Salons</h2>
+        <p class="lead-text" style="margin: 0.75rem auto 0;">Experience private salon fittings, fabric swatch libraries, and bespoke tailoring consultations.</p>
+      </div>
+
+      <div class="flagship-grid">
+        <div class="flagship-card">
+          <div class="flagship-img-wrap">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80&fm=webp" alt="Paris Flagship Boutique" loading="lazy">
+          </div>
+          <div class="flagship-body">
+            <h3 class="flagship-city">Paris Flagship</h3>
+            <p class="flagship-address">18 Rue du Faubourg Saint-Honor&eacute;<br>75008 Paris, France</p>
+            <p class="flagship-hours">Mon &ndash; Sat: 10:00 &ndash; 19:30</p>
+            <a href="contact.html" class="btn btn-secondary" style="font-size: 0.75rem; width: 100%; text-align: center; margin-top: auto;">Book Fitting</a>
+          </div>
+        </div>
+
+        <div class="flagship-card">
+          <div class="flagship-img-wrap">
+            <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80&fm=webp" alt="Milan Salon Boutique" loading="lazy">
+          </div>
+          <div class="flagship-body">
+            <h3 class="flagship-city">Milan Salon</h3>
+            <p class="flagship-address">Via Montenapoleone 12<br>20121 Milano MI, Italy</p>
+            <p class="flagship-hours">Mon &ndash; Sat: 10:00 &ndash; 19:00</p>
+            <a href="contact.html" class="btn btn-secondary" style="font-size: 0.75rem; width: 100%; text-align: center; margin-top: auto;">Book Fitting</a>
+          </div>
+        </div>
+
+        <div class="flagship-card">
+          <div class="flagship-img-wrap">
+            <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=600&q=80&fm=webp" alt="Tokyo Ginza Boutique" loading="lazy">
+          </div>
+          <div class="flagship-body">
+            <h3 class="flagship-city">Tokyo Ginza</h3>
+            <p class="flagship-address">6-10-1 Ginza, Chuo-ku<br>Tokyo 104-0061, Japan</p>
+            <p class="flagship-hours">Daily: 11:00 &ndash; 20:00</p>
+            <a href="contact.html" class="btn btn-secondary" style="font-size: 0.75rem; width: 100%; text-align: center; margin-top: auto;">Book Fitting</a>
+          </div>
+        </div>
+
+        <div class="flagship-card">
+          <div class="flagship-img-wrap">
+            <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=600&q=80&fm=webp" alt="New York Madison Ave Boutique" loading="lazy">
+          </div>
+          <div class="flagship-body">
+            <h3 class="flagship-city">New York Salon</h3>
+            <p class="flagship-address">780 Madison Avenue<br>New York, NY 10065, USA</p>
+            <p class="flagship-hours">Mon &ndash; Sat: 10:00 &ndash; 18:30</p>
+            <a href="contact.html" class="btn btn-secondary" style="font-size: 0.75rem; width: 100%; text-align: center; margin-top: auto;">Book Fitting</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability Pledge -->
+  <section class="section-spacing" id="sustainability" style="background: var(--bg-dark); color: #FFF;">
+    <div class="container" style="max-width: 900px; text-align: center;">
+      <span class="eyebrow eyebrow-light">Our Responsibility</span>
+      <h2 class="heading-lg" style="color: #FFF; margin-bottom: 1.5rem;">Circular Sustainability Pledge</h2>
+      <p style="color: rgba(255,255,255,0.8); line-height: 1.8; font-size: 1.1rem; margin-bottom: 2.5rem;">
+        We produce strictly in limited, numbered batch editions to eliminate deadstock. 100% of our packaging is biodegradable FSC-certified kraft paper with plant-based soy inks, and every garment includes complimentary lifetime stitching repairs.
+      </p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="shop.html" class="btn btn-white">Explore Our Wardrobe</a>
+        <a href="contact.html" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.3); color: #FFF;">Schedule Private Fitting</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <img src="assets/images/stackly-logo.webp" alt="STACKLY" class="brand-logo-img" style="filter: brightness(0) invert(1);">
+          </a>
+          <p class="footer-brand-desc">
+            Mobilizing intelligent fashion curation, bespoke tailoring, sustainable luxury collections, and personalized wardrobe styling for modern life.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-btn" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="shop.html">Shop Catalog</a></li>
+            <li><a href="women.html">Women's Collection</a></li>
+            <li><a href="men.html">Men's Collection</a></li>
+            <li><a href="collections.html">Editorial Collections</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div>
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Contact Coordinates</a></li>
+            <li><a href="about.html#sustainability">Terms &amp; Agreements</a></li>
+            <li><a href="admin-dashboard.html">Security Audits</a></li>
+            <li><a href="size-guide.html">Size &amp; Fit Guide</a></li>
+            <li><a href="user-dashboard.html">Order Status</a></li>
+            <li><a href="user-dashboard.html">User Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="footer-newsletter-text">
+            Get quarterly updates, smart style alerts, and platform feature reports.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for joining STACKLY updates.'); this.reset();">
+            <input type="email" placeholder="Your Email" class="footer-newsletter-input" required>
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          &copy; 2026 Stackly. All rights reserved. Designed for financial clarity and wealth tracking.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Service</a>
+          <a href="admin-dashboard.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

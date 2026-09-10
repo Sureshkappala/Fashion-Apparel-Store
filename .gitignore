@@ -1,0 +1,16 @@
+# Dependencies & OS files
+.DS_Store
+Thumbs.db
+node_modules/
+npm-debug.log*
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary directories
+.tempmediaStorage/
+.user_uploaded/
+scratch/

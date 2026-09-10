@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VÉRITÉ ATELIER — Modern Fashion &amp; Luxury Apparel</title>
+  <meta name="description" content="Discover modern, timeless fashion and luxury apparel at Vérité Atelier. Explore our bespoke collections, new arrivals, lookbooks, and tailored essentials.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <span>Complimentary worldwide delivery on orders over $300</span>
+    <span>Use code <a href="shop.html">STYLE10</a> for 10% off your first order</span>
+  </div>
+
+  <!-- Sticky Navbar -->
+  <header class="site-header">
+    <div class="container navbar-inner">
+      <!-- Brand Logo with STACKLY Logo -->
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/stackly-logo.webp" alt="STACKLY" class="brand-logo-img">
+      </a>
+
+      <!-- Desktop Nav (7 Core Pages: Home, About, Shop, Women, Men, Collections, Contact) -->
+      <nav class="nav-links-desktop" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="women.html" class="nav-link">Women</a>
+        <a href="men.html" class="nav-link">Men</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Action Icons & Controls -->
+      <div class="header-actions">
+        <!-- Search Trigger -->
+        <button class="action-btn search-trigger-btn" aria-label="Open Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Wishlist -->
+        <a href="wishlist.html" class="action-btn" aria-label="View Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-count wishlist-count-badge">0</span>
+        </a>
+
+        <!-- Cart Bag -->
+        <a href="cart.html" class="action-btn" aria-label="View Shopping Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge-count cart-count-badge">0</span>
+        </a>
+
+        <!-- Login Button -->
+        <a href="login.html" class="login-nav-btn">Login</a>
+
+        <!-- Mobile Hamburger Button -->
+        <button class="hamburger-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/stackly-logo.webp" alt="STACKLY" class="brand-logo-img">
+        </a>
+        <button class="modal-close-btn mobile-nav-close" aria-label="Close Menu">&times;</button>
+      </div>
+
+      <div class="mobile-drawer-search-wrap">
+        <form class="mobile-drawer-search-form" onsubmit="event.preventDefault(); const q = this.querySelector('input').value; window.location.href='shop.html?search=' + encodeURIComponent(q);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" placeholder="Search catalog..." required>
+        </form>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link active">Home <span>&rarr;</span></a>
+        <a href="about.html" class="mobile-nav-link">About Us <span>&rarr;</span></a>
+        <a href="shop.html" class="mobile-nav-link">Shop Catalog <span>&rarr;</span></a>
+        <a href="women.html" class="mobile-nav-link">Women's Collection <span>&rarr;</span></a>
+        <a href="men.html" class="mobile-nav-link">Men's Collection <span>&rarr;</span></a>
+        <a href="collections.html" class="mobile-nav-link">Editorial Collections <span>&rarr;</span></a>
+        <a href="contact.html" class="mobile-nav-link">Contact Concierge <span>&rarr;</span></a>
+      </nav>
+
+      <div class="mobile-nav-footer">
+        <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+        <a href="user-dashboard.html" class="btn btn-secondary" style="width: 100%;">My Account</a>
+      </div>
+
+      <div class="mobile-drawer-contact-info">
+        <div class="mobile-drawer-contact-title">Direct Atelier Access</div>
+        <div class="mobile-drawer-contact-item">
+          <span>Call:</span>
+          <a href="tel:+18005557233">+1 (800) 555-SAFE</a>
+        </div>
+        <div class="mobile-drawer-contact-item">
+          <span>Email:</span>
+          <a href="mailto:concierge@stackly.com">concierge@stackly.com</a>
+        </div>
+        <div class="mobile-drawer-contact-item">
+          <span>Salons:</span>
+          <span>Paris &bull; Milan &bull; NYC &bull; London</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal Overlay -->
+  <div class="search-modal">
+    <div class="search-modal-container">
+      <button class="modal-close-btn search-modal-close" aria-label="Close Search">&times;</button>
+      <div class="search-input-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" class="search-input-field" placeholder="Search dresses, coats, linen shirts, leather...">
+      </div>
+      <div class="search-quick-tags">
+        <span style="font-size: 0.75rem; color: var(--text-light); align-self: center;">Popular:</span>
+        <span class="quick-tag" onclick="document.querySelector('.search-input-field').value='Trench'; document.querySelector('.search-input-field').dispatchEvent(new Event('input'));">Trench Coat</span>
+        <span class="quick-tag" onclick="document.querySelector('.search-input-field').value='Silk'; document.querySelector('.search-input-field').dispatchEvent(new Event('input'));">Silk Dress</span>
+        <span class="quick-tag" onclick="document.querySelector('.search-input-field').value='Cashmere'; document.querySelector('.search-input-field').dispatchEvent(new Event('input'));">Cashmere</span>
+        <span class="quick-tag" onclick="document.querySelector('.search-input-field').value='Boots'; document.querySelector('.search-input-field').dispatchEvent(new Event('input'));">Chelsea Boots</span>
+      </div>
+      <div class="search-results-preview"></div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Section 1: Hero Section -->
+    <section class="hero-fashion" aria-label="Hero Section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-tag">
+            <span>●</span> Autumn / Winter Atelier Capsule
+          </div>
+          <h1 class="heading-xl hero-title">
+            <span>Style Made for</span>
+            <span class="editorial-italic">Your Everyday.</span>
+          </h1>
+          <p class="hero-desc">
+            Explore meticulously tailored outerwear, fluid silk silhouettes, and organic natural fibres designed in our Parisian atelier for effortless modern living.
+          </p>
+          <div class="hero-cta-group">
+            <a href="women.html" class="btn btn-primary">Shop Women</a>
+            <a href="men.html" class="btn btn-secondary">Shop Men</a>
+            <a href="collections.html" class="btn-link">Explore Collection &rarr;</a>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=800&q=80&fm=webp" alt="Editorial Fashion Model in Vérité Atelier Coat" class="hero-main-img" loading="eager">
+          <div class="hero-floating-card">
+            <div class="floating-card-title">Pure Double Wool</div>
+            <div class="floating-card-subtitle">Hand-finished in Tuscany &bull; Limited Drop</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Shop By Category -->
+    <section class="section-spacing" aria-label="Shop By Category">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Curated Wardrobe</span>
+            <h2 class="heading-lg">Shop by Category</h2>
+          </div>
+          <a href="shop.html" class="btn-link">View All Categories &rarr;</a>
+        </div>
+
+        <div class="category-grid">
+          <!-- 1. Women -->
+          <a href="women.html" class="category-card">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Women's Apparel Collection" loading="lazy">
+            <div class="category-overlay">
+              <h3 class="category-name">Women's Fashion</h3>
+              <span class="category-count">148 Styles</span>
+              <span class="category-explore">Explore Collection &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 2. Men -->
+          <a href="men.html" class="category-card">
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Men's Sartorial Collection" loading="lazy">
+            <div class="category-overlay">
+              <h3 class="category-name">Men's Fashion</h3>
+              <span class="category-count">94 Styles</span>
+              <span class="category-explore">Explore Collection &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 3. Dresses -->
+          <a href="shop.html?category=dresses" class="category-card">
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Dresses & Gowns" loading="lazy">
+            <div class="category-overlay">
+              <h3 class="category-name">Dresses</h3>
+              <span class="category-count">56 Styles</span>
+              <span class="category-explore">Explore Collection &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 4. Shirts -->
+          <a href="shop.html?category=shirts" class="category-card">
+            <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Linen & Silk Shirts" loading="lazy">
+            <div class="category-overlay">
+              <h3 class="category-name">Shirts &amp; Blouses</h3>
+              <span class="category-count">62 Styles</span>
+              <span class="category-explore">Explore Collection &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 5. Jackets -->
+          <a href="shop.html?category=jackets" class="category-card">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Jackets & Outerwear" loading="lazy">
+            <div class="category-overlay">
+              <h3 class="category-name">Jackets &amp; Coats</h3>
+              <span class="category-count">48 Styles</span>
+              <span class="category-explore">Explore Collection &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 6. Footwear -->
+          <a href="shop.html?category=footwear" class="category-card">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Leather Footwear" loading="lazy">
+            <div class="category-overlay">
+              <h3 class="category-name">Footwear</h3>
+              <span class="category-count">38 Styles</span>
+              <span class="category-explore">Explore Collection &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 7. Bags -->
+          <a href="shop.html?category=bags" class="category-card">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Luxury Handcrafted Bags" loading="lazy">
+            <div class="category-overlay">
+              <h3 class="category-name">Bags &amp; Leather</h3>
+              <span class="category-count">29 Styles</span>
+              <span class="category-explore">Explore Collection &rarr;</span>
+            </div>
+          </a>
+
+          <!-- 8. Accessories -->
+          <a href="shop.html?category=accessories" class="category-card">
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Jewelry & Scarves" loading="lazy">
+            <div class="category-overlay">
+              <h3 class="category-name">Accessories</h3>
+              <span class="category-count">50 Styles</span>
+              <span class="category-explore">Explore Collection &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: New Arrivals -->
+    <section class="section-spacing-sm" aria-label="New Arrivals">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Fresh in Atelier</span>
+            <h2 class="heading-lg">New Arrivals</h2>
+          </div>
+          <a href="new-arrivals.html" class="btn-link">View All New Arrivals &rarr;</a>
+        </div>
+
+        <div class="product-grid" id="homeNewArrivalsGrid">
+          <!-- Populated by store dataset -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Featured Asymmetric Collection -->
+    <section class="section-spacing featured-collection-section" aria-label="Featured Collection">
+      <div class="container featured-collection-grid">
+        <div class="collection-content">
+          <span class="eyebrow eyebrow-light">Capsule 04 &bull; Limited Run</span>
+          <h2 class="heading-lg">Autumn / Winter Atelier Collection</h2>
+          <p>
+            Embracing the tactile richness of un-dyed alpaca, sculptural heavy wools, and brushed mohair. An asymmetric study in proportion and quiet architectural luxury.
+          </p>
+          <a href="collections.html" class="btn btn-white">Shop The Collection</a>
+        </div>
+
+        <div class="collection-visuals">
+          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Autumn Winter Lookbook Main" class="collection-img-primary" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Autumn Winter Model Detail" class="collection-img-secondary" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Trending Now (Horizontal Slider) -->
+    <section class="section-spacing" aria-label="Trending Products">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Most Loved</span>
+            <h2 class="heading-lg">Trending Now</h2>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow-btn trending-slider-prev" aria-label="Previous Slide">&larr;</button>
+            <button class="slider-arrow-btn trending-slider-next" aria-label="Next Slide">&rarr;</button>
+          </div>
+        </div>
+
+        <div class="trending-slider" id="homeTrendingSlider">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Editorial Lookbook -->
+    <section class="section-spacing-sm" aria-label="Lookbook">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="eyebrow">Editorial Lookbook</span>
+          <h2 class="heading-lg">The Season in Motion</h2>
+          <p class="lead-text" style="margin: 0.75rem auto 0;">Click on any look to discover the complete curated wardrobe ensemble.</p>
+        </div>
+
+        <div class="lookbook-grid">
+          <!-- Look 01 -->
+          <div class="lookbook-item">
+            <span class="lookbook-number">01</span>
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Look 01 - The Minimalist Wool Uniform" loading="lazy">
+            <div class="lookbook-details">
+              <h3 class="lookbook-title">The Wool Uniform</h3>
+              <div class="lookbook-pieces">Trench Coat &bull; Wide Leg Trouser &bull; Loafers</div>
+              <span class="lookbook-action">Shop The Look &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Look 02 -->
+          <div class="lookbook-item">
+            <span class="lookbook-number">02</span>
+            <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Look 02 - Evening Fluidity" loading="lazy">
+            <div class="lookbook-details">
+              <h3 class="lookbook-title">Evening Fluidity</h3>
+              <div class="lookbook-pieces">Silk Bias Dress &bull; Gold Knot Earring</div>
+              <span class="lookbook-action">Shop The Look &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Look 03 -->
+          <div class="lookbook-item">
+            <span class="lookbook-number">03</span>
+            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Look 03 - Urban Sartorial" loading="lazy">
+            <div class="lookbook-details">
+              <h3 class="lookbook-title">Urban Sartorial</h3>
+              <div class="lookbook-pieces">Merino Blazer &bull; Oxford Shirt &bull; Chelsea Boot</div>
+              <span class="lookbook-action">Shop The Look &rarr;</span>
+            </div>
+          </div>
+
+          <!-- Look 04 -->
+          <div class="lookbook-item">
+            <span class="lookbook-number">04</span>
+            <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Look 04 - Cashmere Layering" loading="lazy">
+            <div class="lookbook-details">
+              <h3 class="lookbook-title">Quiet Cashmere</h3>
+              <div class="lookbook-pieces">Crewneck Knit &bull; Calfskin Tote &bull; Beanie Set</div>
+              <span class="lookbook-action">Shop The Look &rarr;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Promotional Banner -->
+    <section class="section-spacing promo-banner" aria-label="Promotional Offer">
+      <div class="container promo-grid">
+        <div class="promo-content">
+          <span class="eyebrow">Seasonal Refresh</span>
+          <h2 class="heading-lg" style="margin-bottom: 1.25rem;">Refresh Your Wardrobe for the New Season</h2>
+          <p class="lead-text" style="margin-bottom: 2rem;">
+            Receive a complimentary pure cashmere travel pouch with every order over $400. Use code <strong>AUTUMN20</strong> for 20% off selected outerwear pieces.
+          </p>
+          <a href="shop.html" class="btn btn-primary">Shop Seasonal Offers</a>
+        </div>
+        <div>
+          <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=700&q=80&fm=webp" alt="Seasonal Luxury Wardrobe Offer" class="promo-image" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Why Shop With Us (Benefits) -->
+    <section class="section-spacing-sm" aria-label="Why Shop With Us">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="eyebrow">The Atelier Standard</span>
+          <h2 class="heading-md">Why Shop With Vérité</h2>
+        </div>
+
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Noble Materials</h3>
+            <p class="benefit-desc">100% certified organic linen, Grade-A cashmere, and Italian virgin wool.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Fast Delivery</h3>
+            <p class="benefit-desc">Express worldwide shipping with trackable climate-neutral courier handling.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Secure Checkout</h3>
+            <p class="benefit-desc">256-bit encrypted checkout with modern fraud detection and payment protection.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <polyline points="1 4 1 10 7 10"></polyline>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Easy Returns</h3>
+            <p class="benefit-desc">Complimentary 30-day returns with pre-paid return shipping labels included.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Client Concierge</h3>
+            <p class="benefit-desc">Dedicated sartorial advisors available 7 days a week via live chat &amp; phone.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 8v4l3 3"></path>
+              </svg>
+            </div>
+            <h3 class="benefit-title">Atelier Heritage</h3>
+            <p class="benefit-desc">Designed in Paris, tailored in family-owned European artisan workshops.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Customer Reviews (Slider) -->
+    <section class="section-spacing reviews-section" aria-label="Customer Reviews">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="eyebrow">Client Testimonials</span>
+            <h2 class="heading-lg">Words From Our Patrons</h2>
+          </div>
+          <div class="slider-controls">
+            <button class="slider-arrow-btn reviews-slider-prev" aria-label="Previous Review">&larr;</button>
+            <button class="slider-arrow-btn reviews-slider-next" aria-label="Next Review">&rarr;</button>
+          </div>
+        </div>
+
+        <div class="reviews-slider">
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“The Architectural Wool Trench is easily the finest piece in my closet. The structure and stitching rival houses that charge ten times the price.”</p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80&fm=webp" alt="Camille Dupont" class="author-avatar" loading="lazy">
+              <div>
+                <div class="author-name">Camille Dupont</div>
+                <div class="author-product">Purchased Architectural Wool Trench</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“The Mulberry Silk Bias Dress fits like a dream. The fabric drape catches the light sublimely. I wore it for our anniversary dinner in Zurich.”</p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80&fm=webp" alt="Sophia Lindqvist" class="author-avatar" loading="lazy">
+              <div>
+                <div class="author-name">Sophia Lindqvist</div>
+                <div class="author-product">Purchased Silk Satin Bias Slip Dress</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“Exceptional tailoring on the Linen Atelier Shirt. Crisp yet incredibly soft from the first wear. Customer service was prompt and delightful.”</p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80&fm=webp" alt="Alexander Wright" class="author-avatar" loading="lazy">
+              <div>
+                <div class="author-name">Alexander Wright</div>
+                <div class="author-product">Purchased Tailored Linen Atelier Shirt</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">“The Chelsea boots are pure craftsmanship. Sturdy, remarkably comfortable from day one, and the leather patina after a month looks breathtaking.”</p>
+            <div class="review-author">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=120&q=80&fm=webp" alt="Julian Meyer" class="author-avatar" loading="lazy">
+              <div>
+                <div class="author-name">Julian Meyer</div>
+                <div class="author-product">Purchased Classic Chelsea Leather Boot</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 10: Newsletter & Final CTA -->
+    <section class="section-spacing" aria-label="Newsletter Subscription">
+      <div class="container">
+        <div class="newsletter-box">
+          <span class="eyebrow eyebrow-light">Exclusive Access</span>
+          <h2 class="heading-lg">Get First Access to New Collections</h2>
+          <p>Join the Vérité Atelier journal for private previews, runway editorial notes, and bespoke invitations.</p>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn btn-accent">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta-section" aria-label="Final Call to Action">
+      <div class="container final-cta-wrap">
+        <span class="eyebrow">Timeless Wardrobe</span>
+        <h2 class="heading-xl" style="margin-bottom: 1.25rem;">Find Your Next Favorite Look.</h2>
+        <p class="lead-text" style="margin: 0 auto 2.5rem;">
+          Immerse yourself in our full catalog of handcrafted clothing, boots, and leather accessories.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="new-arrivals.html" class="btn btn-primary">Shop New Arrivals</a>
+          <a href="collections.html" class="btn btn-secondary">Explore Collections</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Quick View Modal -->
+  <div class="modal-backdrop" id="quickViewModal">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <div id="quickViewContent"></div>
+    </div>
+  </div>
+
+  <!-- Size Guide Modal -->
+  <div class="modal-backdrop" id="sizeGuideModal">
+    <div class="modal-content-box" style="max-width: 680px;">
+      <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      <span class="eyebrow">Fit &amp; Sizing</span>
+      <h2 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Garment Size Guide</h2>
+      <p style="font-size: 0.875rem; color: var(--text-muted);">Compare body measurements across our international standard cuts.</p>
+      
+      <div class="size-guide-toggle">
+        <button class="unit-btn active" data-unit="cm">Centimeters (CM)</button>
+        <button class="unit-btn" data-unit="in">Inches (IN)</button>
+      </div>
+
+      <div class="size-table-wrap">
+        <table class="size-table">
+          <thead>
+            <tr>
+              <th>Size</th>
+              <th>Chest</th>
+              <th>Waist</th>
+              <th>Hip</th>
+              <th>Length</th>
+            </tr>
+          </thead>
+          <tbody id="sizeGuideTableBody">
+            <tr><td><strong>XS</strong></td><td>82-86 cm</td><td>64-68 cm</td><td>90-94 cm</td><td>105 cm</td></tr>
+            <tr><td><strong>S</strong></td><td>86-90 cm</td><td>68-72 cm</td><td>94-98 cm</td><td>107 cm</td></tr>
+            <tr><td><strong>M</strong></td><td>90-96 cm</td><td>72-78 cm</td><td>98-104 cm</td><td>109 cm</td></tr>
+            <tr><td><strong>L</strong></td><td>96-102 cm</td><td>78-84 cm</td><td>104-110 cm</td><td>111 cm</td></tr>
+            <tr><td><strong>XL</strong></td><td>102-108 cm</td><td>84-90 cm</td><td>110-116 cm</td><td>113 cm</td></tr>
+            <tr><td><strong>XXL</strong></td><td>108-114 cm</td><td>90-96 cm</td><td>116-122 cm</td><td>115 cm</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <img src="assets/images/stackly-logo.webp" alt="STACKLY" class="brand-logo-img" style="filter: brightness(0) invert(1);">
+          </a>
+          <p class="footer-brand-desc">
+            Mobilizing intelligent fashion curation, bespoke tailoring, sustainable luxury collections, and personalized wardrobe styling for modern life.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-btn" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="shop.html">Shop Catalog</a></li>
+            <li><a href="women.html">Women's Collection</a></li>
+            <li><a href="men.html">Men's Collection</a></li>
+            <li><a href="collections.html">Editorial Collections</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div>
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Contact Coordinates</a></li>
+            <li><a href="about.html#sustainability">Terms &amp; Agreements</a></li>
+            <li><a href="admin-dashboard.html">Security Audits</a></li>
+            <li><a href="size-guide.html">Size &amp; Fit Guide</a></li>
+            <li><a href="user-dashboard.html">Order Status</a></li>
+            <li><a href="user-dashboard.html">User Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="footer-newsletter-text">
+            Get quarterly updates, smart style alerts, and platform feature reports.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for joining STACKLY updates.'); this.reset();">
+            <input type="email" placeholder="Your Email" class="footer-newsletter-input" required>
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          &copy; 2026 Stackly. All rights reserved. Designed for financial clarity and wealth tracking.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Service</a>
+          <a href="admin-dashboard.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products-data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/shop.js"></script>
+  <script>
+    // Populate homepage sections from catalog data
+    document.addEventListener("DOMContentLoaded", () => {
+      const newGrid = document.getElementById("homeNewArrivalsGrid");
+      if (newGrid && typeof getNewArrivals === "function") {
+        const news = getNewArrivals().slice(0, 4);
+        newGrid.innerHTML = news.map(p => createProductCardHtml(p)).join('');
+      }
+
+      const trendingBox = document.getElementById("homeTrendingSlider");
+      if (trendingBox && typeof getTrendingProducts === "function") {
+        const trends = getTrendingProducts();
+        trendingBox.innerHTML = trends.map(p => createProductCardHtml(p)).join('');
+      }
+    });
+  </script>
+</body>
+</html>

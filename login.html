@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Sign In — STACKLY</title>
+  <meta name="description" content="Sign in to your STACKLY account to manage expenses, tracked outlays, and personal finances.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <style>
+    body.login-page-body {
+      background-color: #FFFFFF;
+      min-height: 100vh;
+      font-family: var(--font-sans);
+      color: #0F172A;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-back-bar {
+      padding: 1.25rem 2rem 0.5rem;
+      max-width: 600px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .top-back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8125rem;
+      color: #64748B;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .top-back-link:hover {
+      color: #00A884;
+    }
+
+    .auth-wrapper {
+      max-width: 500px;
+      width: 100%;
+      margin: 1rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    .auth-card-teal {
+      background: #FFFFFF;
+      border: 2px solid #00A884;
+      border-radius: 20px;
+      padding: 2.5rem 2.25rem;
+      box-shadow: 0 10px 30px rgba(0, 168, 132, 0.05);
+    }
+
+    @media (max-width: 480px) {
+      .auth-wrapper {
+        padding: 0 0.75rem;
+      }
+      .auth-card-teal {
+        padding: 2rem 1.25rem;
+      }
+    }
+
+    .auth-header-brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .auth-brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #00A884;
+      font-size: 1.2rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      margin-bottom: 1.25rem;
+    }
+
+    .auth-brand-logo svg {
+      width: 26px;
+      height: 26px;
+      fill: none;
+      stroke: #00A884;
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .auth-title {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: #0F172A;
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.01em;
+    }
+
+    .auth-subtitle {
+      font-size: 0.875rem;
+      color: #64748B;
+      line-height: 1.45;
+      max-width: 380px;
+    }
+
+    .form-group-custom {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group-custom label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: #0F172A;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-input-custom {
+      width: 100%;
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 0.75rem 0.95rem;
+      font-size: 0.875rem;
+      color: #0F172A;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      font-family: inherit;
+    }
+
+    .form-input-custom:focus {
+      border-color: #00A884;
+      box-shadow: 0 0 0 3px rgba(0, 168, 132, 0.12);
+    }
+
+    .form-input-custom::placeholder {
+      color: #94A3B8;
+      font-weight: 400;
+    }
+
+    select.form-input-custom {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.85rem center;
+      background-size: 14px;
+      cursor: pointer;
+    }
+
+    .pass-wrapper {
+      position: relative;
+    }
+
+    .pass-eye-btn {
+      position: absolute;
+      right: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      color: #94A3B8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pass-eye-btn:hover {
+      color: #00A884;
+    }
+
+    .options-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.78125rem;
+      gap: 0.5rem;
+    }
+
+    .options-row label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: #64748B;
+      cursor: pointer;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .options-row input[type="checkbox"] {
+      width: 15px;
+      height: 15px;
+      accent-color: #00A884;
+      cursor: pointer;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin: 0;
+    }
+
+    .options-row a {
+      color: #00A884;
+      text-decoration: underline;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .btn-teal-action {
+      width: 100%;
+      background: #00A884;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 8px;
+      padding: 0.85rem 1.25rem;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .btn-teal-action:hover {
+      background: #008f70;
+    }
+
+    .btn-teal-action:active {
+      transform: scale(0.99);
+    }
+
+    .auth-bottom-switch {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 0.8125rem;
+      color: #64748B;
+      white-space: nowrap;
+    }
+
+    .auth-bottom-switch a {
+      color: #00A884;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .demo-strip-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      background: rgba(0, 168, 132, 0.08);
+      color: #00A884;
+      border: 1px dashed #00A884;
+      border-radius: 6px;
+      padding: 0.35rem 0.65rem;
+      cursor: pointer;
+      font-weight: 600;
+      margin-top: 0.75rem;
+      transition: background 0.2s;
+    }
+
+    .demo-strip-btn:hover {
+      background: rgba(0, 168, 132, 0.16);
+    }
+  </style>
+</head>
+<body class="login-page-body">
+
+  <!-- Top Simple Back Link -->
+  <div class="top-back-bar">
+    <a href="index.html" class="top-back-link">
+      &larr; Back to Home
+    </a>
+  </div>
+
+  <!-- Centered Login Container with Teal Border -->
+  <main class="auth-wrapper">
+    <div class="auth-card-teal">
+      
+      <!-- Brand Logo Header -->
+      <div class="auth-header-brand">
+        <a href="index.html" class="auth-brand-logo">
+          <svg viewBox="0 0 24 24">
+            <path d="M16 16l4-4-4-4M8 8l-4 4 4 4M14 4l-4 16" />
+          </svg>
+          STACKLY
+        </a>
+        <h1 class="auth-title">Welcome Back</h1>
+        <p class="auth-subtitle">Sign in to access your ledger, tracked expenses, and personal insights.</p>
+        <button type="button" class="demo-strip-btn" id="btnAutoFillDemo">
+          ⚡ Auto-fill Demo Account
+        </button>
+      </div>
+
+      <form id="loginForm" novalidate>
+        <!-- Select Role -->
+        <div class="form-group-custom">
+          <label for="loginRole">Select Role *</label>
+          <select id="loginRole" class="form-input-custom" required>
+            <option value="User" selected>User</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </div>
+
+        <!-- Email Address -->
+        <div class="form-group-custom">
+          <label for="loginEmail">Email Address *</label>
+          <input type="email" id="loginEmail" class="form-input-custom" placeholder="USERNAME@GMAIL.COM" required autocomplete="email">
+        </div>
+
+        <!-- Password -->
+        <div class="form-group-custom">
+          <label for="loginPass">Password *</label>
+          <div class="pass-wrapper">
+            <input type="password" id="loginPass" class="form-input-custom" placeholder="••••••••" required autocomplete="current-password" style="padding-right: 2.5rem;">
+            <button type="button" class="pass-eye-btn" id="togglePassVisibility" aria-label="Toggle password visibility">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Remember / Forgot row -->
+        <div class="options-row">
+          <label>
+            <input type="checkbox" id="rememberMe" checked>
+            <span>Remember for 30 days</span>
+          </label>
+          <a href="#" id="forgotPassLink">Forgot password?</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-teal-action">
+          Sign In to Portal &rarr;
+        </button>
+
+        <!-- Bottom Switch -->
+        <div class="auth-bottom-switch">
+          Don't have an account? <a href="register.html">Create free account</a>
+        </div>
+      </form>
+
+    </div>
+  </main>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal-backdrop" id="forgotModal">
+    <div class="modal-content-box" style="max-width: 440px; text-align: center; border: 2px solid #00A884; border-radius: 16px;">
+      <button class="modal-close-btn" id="forgotCloseBtn" aria-label="Close Modal">&times;</button>
+      <h2 style="font-size: 1.4rem; font-weight: 700; color: #0F172A; margin-bottom: 0.5rem;">Reset Your Password</h2>
+      <p style="font-size: 0.875rem; color: #64748B; margin-bottom: 1.5rem;">Enter your registered email address to receive a secure password recovery token.</p>
+      
+      <form id="forgotForm">
+        <div class="form-group-custom" style="text-align: left;">
+          <label for="forgotEmailInput">Registered Email</label>
+          <input type="email" id="forgotEmailInput" class="form-input-custom" placeholder="USERNAME@GMAIL.COM" required>
+        </div>
+        <button type="submit" class="btn-teal-action" style="margin-top: 1rem;">Send Reset Instructions</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/store.js"></script>
+  <script>
+    // Autofill demo credentials
+    document.getElementById("btnAutoFillDemo")?.addEventListener("click", () => {
+      document.getElementById("loginRole").value = "User";
+      document.getElementById("loginEmail").value = "jordan.mitchell@gmail.com";
+      document.getElementById("loginPass").value = "SecurePass2026!";
+      Store.showToast("Demo credentials filled into login form.");
+    });
+
+    // Show/Hide password toggle
+    const toggleBtn = document.getElementById("togglePassVisibility");
+    const passInput = document.getElementById("loginPass");
+    toggleBtn?.addEventListener("click", () => {
+      if (passInput.type === "password") {
+        passInput.type = "text";
+      } else {
+        passInput.type = "password";
+      }
+    });
+
+    // Form validation and login handler
+    document.getElementById("loginForm")?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const role = document.getElementById("loginRole").value;
+      const email = document.getElementById("loginEmail").value.trim();
+      const pass = document.getElementById("loginPass").value.trim();
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!email || !emailRegex.test(email)) {
+        Store.showToast("Please enter a valid email address.");
+        return;
+      }
+      if (!pass || pass.length < 6) {
+        Store.showToast("Password must be at least 6 characters.");
+        return;
+      }
+
+      Store.showToast(`Welcome back (${role})! Authenticating session...`);
+      setTimeout(() => {
+        if (role === "Admin") {
+          window.location.href = "admin-dashboard.html";
+        } else {
+          window.location.href = "user-dashboard.html";
+        }
+      }, 700);
+    });
+
+    // Forgot password modal
+    const forgotLink = document.getElementById("forgotPassLink");
+    const forgotModal = document.getElementById("forgotModal");
+    const forgotClose = document.getElementById("forgotCloseBtn");
+
+    forgotLink?.addEventListener("click", (e) => {
+      e.preventDefault();
+      forgotModal?.classList.add("open");
+    });
+    forgotClose?.addEventListener("click", () => {
+      forgotModal?.classList.remove("open");
+    });
+    forgotModal?.addEventListener("click", (e) => {
+      if (e.target === forgotModal) forgotModal.classList.remove("open");
+    });
+
+    document.getElementById("forgotForm")?.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const femail = document.getElementById("forgotEmailInput").value.trim();
+      if (femail) {
+        forgotModal?.classList.remove("open");
+        Store.showToast(`Password recovery instructions dispatched to ${femail}.`);
+      }
+    });
+  </script>
+</body>
+</html>

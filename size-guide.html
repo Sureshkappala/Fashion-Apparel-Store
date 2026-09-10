@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Size &amp; Fit Guide — VÉRITÉ ATELIER</title>
+  <meta name="description" content="Detailed sizing guide and international measurement conversions for Vérité Atelier garments.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+  <div class="top-announcement">
+    <span>Need bespoke tailoring advice? Contact our Parisian Sartorial Concierge</span>
+  </div>
+
+  <header class="site-header">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/images/stackly-logo.webp" alt="Stackly Fashion" class="brand-logo-img">
+      </a>
+      <nav class="nav-links-desktop">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="women.html" class="nav-link">Women</a>
+        <a href="men.html" class="nav-link">Men</a>
+        <a href="collections.html" class="nav-link">Collections</a>
+      </nav>
+      <div class="header-actions">
+        <button class="action-btn search-trigger-btn" aria-label="Open Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="wishlist.html" class="action-btn" aria-label="View Wishlist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span class="badge-count wishlist-count-badge">0</span></a>
+        <a href="cart.html" class="action-btn" aria-label="View Shopping Bag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg><span class="badge-count cart-count-badge">0</span></a>
+        <a href="login.html" class="login-nav-btn">Login</a>
+        <button class="hamburger-btn" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/stackly-logo.webp" alt="STACKLY" class="brand-logo-img">
+        </a>
+        <button class="modal-close-btn mobile-nav-close" aria-label="Close Menu">&times;</button>
+      </div>
+
+      <div class="mobile-drawer-search-wrap">
+        <form class="mobile-drawer-search-form" onsubmit="event.preventDefault(); const q = this.querySelector('input').value; window.location.href='shop.html?search=' + encodeURIComponent(q);">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" placeholder="Search catalog..." required>
+        </form>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Home <span>&rarr;</span></a>
+        <a href="about.html" class="mobile-nav-link">About Us <span>&rarr;</span></a>
+        <a href="shop.html" class="mobile-nav-link">Shop Catalog <span>&rarr;</span></a>
+        <a href="women.html" class="mobile-nav-link">Women's Collection <span>&rarr;</span></a>
+        <a href="men.html" class="mobile-nav-link">Men's Collection <span>&rarr;</span></a>
+        <a href="collections.html" class="mobile-nav-link">Editorial Collections <span>&rarr;</span></a>
+        <a href="contact.html" class="mobile-nav-link">Contact Concierge <span>&rarr;</span></a>
+      </nav>
+
+      <div class="mobile-nav-footer">
+        <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+        <a href="user-dashboard.html" class="btn btn-secondary" style="width: 100%;">My Account</a>
+      </div>
+
+      <div class="mobile-drawer-contact-info">
+        <div class="mobile-drawer-contact-title">Direct Atelier Access</div>
+        <div class="mobile-drawer-contact-item">
+          <span>Call:</span>
+          <a href="tel:+18005557233">+1 (800) 555-SAFE</a>
+        </div>
+        <div class="mobile-drawer-contact-item">
+          <span>Email:</span>
+          <a href="mailto:concierge@stackly.com">concierge@stackly.com</a>
+        </div>
+        <div class="mobile-drawer-contact-item">
+          <span>Salons:</span>
+          <span>Paris &bull; Milan &bull; NYC &bull; London</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="search-modal">
+    <div class="search-modal-container">
+      <button class="modal-close-btn search-modal-close">&times;</button>
+      <div class="search-input-wrap">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" class="search-input-field" placeholder="Search products, collections, cashmere...">
+      </div>
+      <div class="search-results-preview"></div>
+    </div>
+  </div>
+
+  <section class="section-spacing-sm" style="background: var(--bg-secondary); border-bottom: 1px solid var(--border-light);">
+    <div class="container" style="text-align: center;">
+      <span class="eyebrow">Precision Fitting</span>
+      <h1 class="heading-xl">International Size &amp; Fit Guide</h1>
+      <p class="lead-text" style="margin: 0.75rem auto 0;">Convert measurements seamlessly between metric and imperial scales.</p>
+    </div>
+  </section>
+
+  <main class="section-spacing">
+    <div class="container" style="max-width: 960px;">
+      <!-- Toggle Controls -->
+      <div class="size-guide-toggle">
+        <button class="unit-btn active" id="unitCmBtn" onclick="toggleSizeUnits('cm')">Centimeters (CM)</button>
+        <button class="unit-btn" id="unitInBtn" onclick="toggleSizeUnits('in')">Inches (IN)</button>
+      </div>
+
+      <!-- Tops & Outerwear Table -->
+      <div style="margin-bottom: 4rem;">
+        <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">1. Coats, Jackets &amp; Knitwear</h3>
+        <div class="size-table-wrap">
+          <table class="size-table">
+            <thead>
+              <tr><th>Size</th><th>Bust / Chest</th><th>Waist</th><th>Hip</th><th>Back Length</th></tr>
+            </thead>
+            <tbody id="topsTbody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Dresses Table -->
+      <div style="margin-bottom: 4rem;">
+        <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">2. Silk Slip Dresses &amp; Evening Gowns</h3>
+        <div class="size-table-wrap">
+          <table class="size-table">
+            <thead>
+              <tr><th>Size</th><th>Bust</th><th>Waist</th><th>Hip</th><th>Total Drape Length</th></tr>
+            </thead>
+            <tbody id="dressesTbody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Footwear Table -->
+      <div style="margin-bottom: 4rem;">
+        <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">3. Leather Footwear &amp; Chelsea Boots</h3>
+        <div class="size-table-wrap">
+          <table class="size-table">
+            <thead>
+              <tr><th>EU Size</th><th>US (Men)</th><th>US (Women)</th><th>UK</th><th>Foot Length (CM)</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>37</strong></td><td>-</td><td>6.5</td><td>4</td><td>23.5 cm</td></tr>
+              <tr><td><strong>38</strong></td><td>-</td><td>7.5</td><td>5</td><td>24.2 cm</td></tr>
+              <tr><td><strong>39</strong></td><td>6.5</td><td>8.5</td><td>6</td><td>25.0 cm</td></tr>
+              <tr><td><strong>40</strong></td><td>7.5</td><td>9.5</td><td>6.5</td><td>25.7 cm</td></tr>
+              <tr><td><strong>41</strong></td><td>8.5</td><td>10.5</td><td>7.5</td><td>26.4 cm</td></tr>
+              <tr><td><strong>42</strong></td><td>9</td><td>11</td><td>8</td><td>27.0 cm</td></tr>
+              <tr><td><strong>43</strong></td><td>10</td><td>-</td><td>9</td><td>27.7 cm</td></tr>
+              <tr><td><strong>44</strong></td><td>11</td><td>-</td><td>10</td><td>28.4 cm</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Measuring Advice -->
+      <div style="background: var(--bg-card); border: 1px solid var(--border-light); padding: 2.5rem; border-radius: 4px;">
+        <h3 style="font-size: 1.3rem; margin-bottom: 1rem;">How to Measure with Precision</h3>
+        <ul style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-muted); font-size: 0.9375rem;">
+          <li><strong>Chest / Bust:</strong> Measure around the fullest part of your bust, keeping the measuring tape horizontal and relaxed.</li>
+          <li><strong>Waist:</strong> Measure around your natural waistline, typically the narrowest point of your torso above your belly button.</li>
+          <li><strong>Hips:</strong> Stand with feet together and measure around the fullest part of your hips.</li>
+          <li><strong>Sartorial Advice:</strong> If you fall between two sizes, we recommend selecting the larger size for tailored outerwear, or the smaller size for bias-cut silk garments.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Global Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <img src="assets/images/stackly-logo.webp" alt="STACKLY" class="brand-logo-img" style="filter: brightness(0) invert(1);">
+          </a>
+          <p class="footer-brand-desc">
+            Mobilizing intelligent fashion curation, bespoke tailoring, sustainable luxury collections, and personalized wardrobe styling for modern life.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="footer-social-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.64a1.64 1.64 0 1 0 0 3.28 1.64 1.64 0 0 0 0-3.28z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-btn" aria-label="X (Twitter)">
+              <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="404.html" class="footer-social-btn" aria-label="YouTube">
+              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Stackly</a></li>
+            <li><a href="shop.html">Shop Catalog</a></li>
+            <li><a href="women.html">Women's Collection</a></li>
+            <li><a href="men.html">Men's Collection</a></li>
+            <li><a href="collections.html">Editorial Collections</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Support -->
+        <div>
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links-list">
+            <li><a href="contact.html">Contact Coordinates</a></li>
+            <li><a href="about.html#sustainability">Terms &amp; Agreements</a></li>
+            <li><a href="admin-dashboard.html">Security Audits</a></li>
+            <li><a href="size-guide.html">Size &amp; Fit Guide</a></li>
+            <li><a href="user-dashboard.html">Order Status</a></li>
+            <li><a href="user-dashboard.html">User Dashboard</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div>
+          <h4 class="footer-heading">Newsletter</h4>
+          <p class="footer-newsletter-text">
+            Subscribe for private trunk show access, seasonal lookbooks, and luxury tailoring invitations.
+          </p>
+          <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to Stackly Haute Couture updates.'); this.reset();">
+            <input type="email" class="footer-newsletter-input" placeholder="Enter your email" required aria-label="Email address for newsletter">
+            <button type="submit" class="footer-newsletter-btn">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-copy">
+          &copy; 2026 Stackly. All rights reserved. Designed for sartorial excellence and luxury wardrobe curation.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="about.html#sustainability">Privacy Policy</a>
+          <a href="about.html#sustainability">Terms of Service</a>
+          <a href="admin-dashboard.html">Security Audits</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/store.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    const topsData = {
+      cm: [
+        { s: "XS", c: "82-86 cm", w: "64-68 cm", h: "90-94 cm", l: "105 cm" },
+        { s: "S", c: "86-90 cm", w: "68-72 cm", h: "94-98 cm", l: "107 cm" },
+        { s: "M", c: "90-96 cm", w: "72-78 cm", h: "98-104 cm", l: "109 cm" },
+        { s: "L", c: "96-102 cm", w: "78-84 cm", h: "104-110 cm", l: "111 cm" },
+        { s: "XL", c: "102-108 cm", w: "84-90 cm", h: "110-116 cm", l: "113 cm" },
+        { s: "XXL", c: "108-114 cm", w: "90-96 cm", h: "116-122 cm", l: "115 cm" }
+      ],
+      in: [
+        { s: "XS", c: "32-34 in", w: "25-27 in", h: "35-37 in", l: "41.3 in" },
+        { s: "S", c: "34-35.5 in", w: "27-28.5 in", h: "37-38.5 in", l: "42.1 in" },
+        { s: "M", c: "35.5-38 in", w: "28.5-31 in", h: "38.5-41 in", l: "42.9 in" },
+        { s: "L", c: "38-40 in", w: "31-33 in", h: "41-43 in", l: "43.7 in" },
+        { s: "XL", c: "40-42.5 in", w: "33-35.5 in", h: "43-45.5 in", l: "44.5 in" },
+        { s: "XXL", c: "42.5-45 in", w: "35.5-38 in", h: "45.5-48 in", l: "45.3 in" }
+      ]
+    };
+
+    function toggleSizeUnits(unit) {
+      document.querySelectorAll(".unit-btn").forEach(b => b.classList.remove("active"));
+      if (unit === 'cm') document.getElementById('unitCmBtn').classList.add('active');
+      else document.getElementById('unitInBtn').classList.add('active');
+
+      const tbody = document.getElementById("topsTbody");
+      const dtbody = document.getElementById("dressesTbody");
+      const d = topsData[unit];
+      
+      if (tbody) {
+        tbody.innerHTML = d.map(r => `<tr><td><strong>${r.s}</strong></td><td>${r.c}</td><td>${r.w}</td><td>${r.h}</td><td>${r.l}</td></tr>`).join('');
+      }
+      if (dtbody) {
+        dtbody.innerHTML = d.map(r => `<tr><td><strong>${r.s}</strong></td><td>${r.c}</td><td>${r.w}</td><td>${r.h}</td><td>${r.l}</td></tr>`).join('');
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => toggleSizeUnits('cm'));
+  </script>
+</body>
+</html>
