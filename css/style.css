@@ -2322,7 +2322,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .concierge-banner-box {
-  background: linear-gradient(135deg, #0A1924 0%, #112836 100%);
+  background: linear-gradient(135deg, #0A1924 0%, #0D2434 50%, #112E40 100%);
   color: #FFFFFF;
   border-radius: var(--radius-md);
   padding: clamp(2rem, 5vw, 4rem);
@@ -2330,6 +2330,43 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: 1.2fr 0.8fr;
   gap: 2.5rem;
   align-items: center;
+  border: 1px solid rgba(56, 178, 154, 0.25);
+  box-shadow: 0 16px 40px rgba(10, 25, 36, 0.4);
+}
+
+.concierge-banner-box .eyebrow-tag,
+.concierge-banner-box .eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal-accent) !important;
+  margin-bottom: 0.75rem;
+}
+
+.concierge-banner-box .btn-primary {
+  background: var(--gradient-teal) !important;
+  border-color: var(--teal-accent) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 16px rgba(56, 178, 154, 0.35);
+}
+
+.concierge-banner-box .btn-primary:hover {
+  background: var(--teal-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(56, 178, 154, 0.45);
+}
+
+.concierge-banner-box .btn-secondary {
+  border-color: rgba(255, 255, 255, 0.35) !important;
+  color: #FFFFFF !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.concierge-banner-box .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.18) !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
 }
 
 .concierge-banner-title {
@@ -2341,7 +2378,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .concierge-banner-desc {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.95rem;
   line-height: 1.7;
   margin-bottom: 1.75rem;
