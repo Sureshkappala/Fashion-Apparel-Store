@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/style.css?v=2.6">
-  <link rel="stylesheet" href="css/shop.css?v=2.6">
+  <link rel="stylesheet" href="css/style.css?v=2.7">
+  <link rel="stylesheet" href="css/shop.css?v=2.7">
   <style>
     body.login-page-body {
       background-color: var(--bg-primary);
@@ -374,7 +374,7 @@
     </div>
   </div>
 
-  <script src="js/store.js?v=2.6"></script>
+  <script src="js/store.js?v=2.7"></script>
   <script>
     // Autofill demo credentials
     document.getElementById("btnAutoFillDemo")?.addEventListener("click", () => {
@@ -412,7 +412,18 @@
         return;
       }
 
-      Store.showToast(`Welcome back (${role})! Authenticating session...`);
+      let displayName = "Eleanor Vance";
+      if (email.toLowerCase().includes("jordan")) {
+        displayName = "Jordan Mitchell";
+      } else if (email.includes("@")) {
+        const local = email.split("@")[0].replace(/[._]/g, " ");
+        displayName = local.charAt(0).toUpperCase() + local.slice(1);
+      }
+
+      localStorage.setItem("verite_user", JSON.stringify({ name: displayName, email: email, role: role }));
+      localStorage.setItem("stackly_user", JSON.stringify({ name: displayName, email: email, role: role }));
+
+      Store.showToast(`Welcome back, ${displayName}! Authenticating session...`);
       setTimeout(() => {
         if (role === "Admin") {
           window.location.href = "admin-dashboard.html";

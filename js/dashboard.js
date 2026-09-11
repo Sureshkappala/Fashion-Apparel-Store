@@ -108,9 +108,38 @@ function initUserDashboard() {
     });
   }
 
+  // Load User Profile Name
+  initUserProfile();
+
   // Render orders
   renderUserOrders();
   renderUserWishlist();
+}
+
+function initUserProfile() {
+  let userName = "Eleanor Vance";
+  let userEmail = "patron@veriteatelier.com";
+
+  try {
+    const raw = localStorage.getItem("verite_user") || localStorage.getItem("stackly_user");
+    if (raw) {
+      const u = JSON.parse(raw);
+      if (u.name) userName = u.name;
+      if (u.email) userEmail = u.email;
+    }
+  } catch (e) {}
+
+  const greeting = document.getElementById("userGreetingTitle");
+  if (greeting) greeting.textContent = `Bonjour, ${userName}`;
+
+  const sidebarNameEls = document.querySelectorAll(".dashboard-user-name");
+  sidebarNameEls.forEach(el => el.textContent = userName);
+
+  const nameInput = document.querySelector("#tab-settings input[type='text']");
+  if (nameInput) nameInput.value = userName;
+
+  const emailInput = document.querySelector("#tab-settings input[type='email']");
+  if (emailInput) emailInput.value = userEmail;
 }
 
 function renderUserOrders() {
