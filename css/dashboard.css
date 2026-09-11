@@ -124,12 +124,29 @@
 .btn-dashboard-drawer {
   display: none;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8125rem;
-  padding: 0.5rem 0.85rem;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.35rem 0.65rem;
   background: var(--bg-card);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-dashboard-drawer svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.brand-logo-img {
+  height: 42px !important;
+  max-height: 46px !important;
+  width: auto;
+  display: block;
 }
 
 /* --------------------------------------------------------------------------
