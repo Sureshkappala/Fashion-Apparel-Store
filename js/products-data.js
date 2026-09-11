@@ -24,11 +24,11 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
     stock: 7,
-    image: "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=700&q=80&fm=webp",
-      "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=700&q=80&fm=webp",
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=500&q=65&fm=webp",
+      "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=500&q=65&fm=webp",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Crafted from double-faced Italian virgin wool, this architectural trench redefines modern tailoring with structured storm flaps, an exaggerated notched lapel, and a belted waist silhouette.",
     fabric: "100% Italian Virgin Wool. Cupro lining.",
@@ -54,10 +54,10 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["XS", "S", "M", "L"],
     stock: 12,
-    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=450&q=60&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80&fm=webp",
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=450&q=60&fm=webp",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "An effortless 90s-inspired slip dress cut on the bias in lustrous mulberry silk. Features delicate roulette straps and a fluid, floor-grazing drape that moves effortlessly with every step.",
     fabric: "100% 22 Momme Mulberry Silk.",
@@ -83,10 +83,10 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     stock: 15,
-    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80&fm=webp",
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=500&q=65&fm=webp",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Woven in Normandy from long-staple organic flax, this relaxed yet refined shirt boasts mother-of-pearl buttons, a spread collar, and pre-washed softness for seasonless elegance.",
     fabric: "100% Organic French Flax Linen.",
@@ -112,10 +112,10 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
     stock: 4,
-    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80&fm=webp",
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=500&q=65&fm=webp",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Spun from ultra-fine Grade-A Mongolian cashmere. Lightweight yet exquisitely insulating, with ribbed trims and relaxed dropped shoulders.",
     fabric: "100% Grade-A Mongolian Cashmere (2-ply).",
@@ -141,10 +141,10 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["One Size"],
     stock: 6,
-    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80&fm=webp",
-      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=65&fm=webp",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Handcrafted in Florence using full-grain vegetable tanned leather. Features a spacious microfiber-lined interior, magnetic closure, and laptop compartment.",
     fabric: "100% Full-grain Tuscan Calf Leather.",
@@ -169,9 +169,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["40", "41", "42", "43", "44", "45"],
     stock: 9,
-    image: "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?auto=format&fit=crop&w=450&q=60&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?auto=format&fit=crop&w=450&q=60&fm=webp"
     ],
     description: "Goodyear-welted Chelsea boots built on an archival British last. Features elastic side gussets, stacked leather heel, and a durable Vibram rubber outsole.",
     fabric: "Full-grain calfskin upper with Goodyear welted construction.",
@@ -197,9 +197,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["XS", "S", "M", "L"],
     stock: 14,
-    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "High-waisted trousers tailored with deep double front pleats and a relaxed wide-leg silhouette that cascades gracefully.",
     fabric: "70% Tencel Lyocell, 30% Linen.",
@@ -224,9 +224,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["One Size"],
     stock: 20,
-    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=450&q=60&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=450&q=60&fm=webp"
     ],
     description: "Cast in lightweight recycled silver coated with 3 microns of 18-karat gold vermeil. High polish with an organic ribbon motif.",
     fabric: "18k Gold Vermeil over 925 Sterling Silver.",
@@ -251,9 +251,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["S", "M", "L", "XL"],
     stock: 8,
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "An unlined single-breasted blazer with soft natural shoulders and patch pockets, balancing sartorial refinement with everyday ease.",
     fabric: "100% Super 130s Merino Wool.",
@@ -278,9 +278,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["36", "37", "38", "39", "40", "41"],
     stock: 11,
-    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Crafted in Portugal from buttery soft nappa leather with a squared almond toe and cushioned memory-foam footbed.",
     fabric: "100% Calfskin Nappa Leather.",
@@ -305,9 +305,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["One Size"],
     stock: 18,
-    image: "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Warm, ultra-plush ribbed cashmere knit accessory duo that delivers sublime softness and thermal warmth during winter chills.",
     fabric: "100% Mongolian Cashmere.",
@@ -332,9 +332,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["XS", "S", "M", "L"],
     stock: 8,
-    image: "https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=450&q=60&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1551803091-e20673f15770?auto=format&fit=crop&w=450&q=60&fm=webp"
     ],
     description: "Cut from heavy silk crepe de Chine with dropped shoulders, exaggerated French cuffs, and a concealed button placket.",
     fabric: "100% Silk Crepe de Chine.",
@@ -359,9 +359,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["S", "M", "L", "XL"],
     stock: 10,
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Tailored with classic forward pleats, side adjusters, and a subtle taper down to a clean cuff break in Biella flannel wool.",
     fabric: "100% Italian Virgin Wool Flannel.",
@@ -386,9 +386,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["XS", "S", "M", "L"],
     stock: 5,
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Floor-sweeping architectural evening gown crafted with an asymmetric high neckline, low cowl back, and fluid hem train.",
     fabric: "100% Heavy Mulberry Silk Charmeuse.",
@@ -413,9 +413,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["XS", "S", "M", "L", "XL"],
     stock: 7,
-    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Strong structural shoulders with a nipped waistline, peaked lapels, and carved genuine horn buttons.",
     fabric: "100% Superfine Italian Wool. Cupro lining.",
@@ -440,9 +440,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["40", "41", "42", "43", "44", "45"],
     stock: 12,
-    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Handcrafted in Northampton using Goodyear welt construction and antique hand-burnished French calfskin.",
     fabric: "100% French Calfskin with Dainite Soles.",
@@ -467,9 +467,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["85cm", "90cm", "95cm", "100cm"],
     stock: 16,
-    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Supple reverse calfskin suede with a matte brushed brass buckle and feathered stitched edges.",
     fabric: "100% Italian Reverse Suede Calfskin.",
@@ -493,9 +493,9 @@ const PRODUCTS_DATA = [
     ],
     sizes: ["S", "M", "L", "XL", "XXL"],
     stock: 9,
-    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80&fm=webp",
+    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=500&q=65&fm=webp",
     gallery: [
-      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=700&q=80&fm=webp"
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=500&q=65&fm=webp"
     ],
     description: "Finely spun 140s two-ply West Indian Sea Island cotton with a textured Marcella bib front and mother-of-pearl stud closures.",
     fabric: "100% Sea Island Long-Staple Cotton.",

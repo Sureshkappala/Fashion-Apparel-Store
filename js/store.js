@@ -25,7 +25,7 @@ const Store = {
           color: "Camel",
           size: "S",
           quantity: 1,
-          image: "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=700&q=80&fm=webp"
+          image: "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=500&q=65&fm=webp"
         },
         {
           id: "VA-104",
@@ -34,7 +34,7 @@ const Store = {
           color: "Oatmeal",
           size: "M",
           quantity: 1,
-          image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80&fm=webp"
+          image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=500&q=65&fm=webp"
         }
       ];
     } catch (e) {
