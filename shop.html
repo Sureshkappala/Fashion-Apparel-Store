@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="css/style.css?v=2.2">
-  <link rel="stylesheet" href="css/shop.css?v=2.2">
+  <link rel="stylesheet" href="css/style.css?v=2.4">
+  <link rel="stylesheet" href="css/shop.css?v=2.4">
 </head>
 <body>
 
@@ -337,23 +337,23 @@
             <a href="size-guide.html" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.3); color: #FFF;">Open Fit &amp; Size Guide</a>
           </div>
         </div>
-        <div style="display: flex; flex-direction: column; gap: 1.25rem; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.1);">
-          <div style="display: flex; gap: 1rem; align-items: center;">
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 700;">1:1</div>
+        <div style="display: flex; flex-direction: column; gap: 1.25rem; background: rgba(255,255,255,0.05); padding: clamp(1.25rem, 3vw, 2rem); border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.1);">
+          <div class="concierge-service-item">
+            <div class="concierge-service-icon" style="background: var(--accent);">1:1</div>
             <div>
               <div style="font-weight: 600; font-size: 0.95rem;">Private Video Fitting</div>
               <div style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">30-min consultation with head tailor</div>
             </div>
           </div>
-          <div style="display: flex; gap: 1rem; align-items: center;">
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: #38B29A; color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 700;">VIP</div>
+          <div class="concierge-service-item">
+            <div class="concierge-service-icon" style="background: #38B29A;">VIP</div>
             <div>
               <div style="font-weight: 600; font-size: 0.95rem;">Home Try-On Trunk</div>
               <div style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">Curated selection sent directly to your door</div>
             </div>
           </div>
-          <div style="display: flex; gap: 1rem; align-items: center;">
-            <div style="width: 44px; height: 44px; border-radius: 50%; background: #2B7A78; color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 700;">&infin;</div>
+          <div class="concierge-service-item">
+            <div class="concierge-service-icon" style="background: #2B7A78;">&infin;</div>
             <div>
               <div style="font-weight: 600; font-size: 0.95rem;">Lifetime Alteration Care</div>
               <div style="font-size: 0.75rem; color: rgba(255,255,255,0.7);">Complimentary seasonal seam adjustments</div>
@@ -410,10 +410,10 @@
       </div>
 
       <div class="faq-list">
-        <div class="faq-item active">
+        <div class="faq-item">
           <button class="faq-question-btn" type="button">
             <span>How does STACKLY Vérité Atelier ensure accurate sizing?</span>
-            <span class="faq-toggle-symbol" style="font-size: 1.35rem; font-weight: 700; color: var(--teal-accent); min-width: 24px; text-align: center;">&minus;</span>
+            <span class="faq-toggle-symbol">&#43;</span>
           </button>
           <div class="faq-answer-panel">
             <p class="faq-answer-text">
@@ -425,7 +425,7 @@
         <div class="faq-item">
           <button class="faq-question-btn" type="button">
             <span>What is your worldwide shipping timeline and customs handling?</span>
-            <span class="faq-toggle-symbol" style="font-size: 1.35rem; font-weight: 700; color: var(--teal-accent); min-width: 24px; text-align: center;">&#43;</span>
+            <span class="faq-toggle-symbol">&#43;</span>
           </button>
           <div class="faq-answer-panel">
             <p class="faq-answer-text">
@@ -437,7 +437,7 @@
         <div class="faq-item">
           <button class="faq-question-btn" type="button">
             <span>How should I care for pure virgin wool and mulberry silk?</span>
-            <span class="faq-toggle-symbol" style="font-size: 1.35rem; font-weight: 700; color: var(--teal-accent); min-width: 24px; text-align: center;">&#43;</span>
+            <span class="faq-toggle-symbol">&#43;</span>
           </button>
           <div class="faq-answer-panel">
             <p class="faq-answer-text">
@@ -449,7 +449,7 @@
         <div class="faq-item">
           <button class="faq-question-btn" type="button">
             <span>Can I request custom sleeve or hem alterations before shipping?</span>
-            <span class="faq-toggle-symbol" style="font-size: 1.35rem; font-weight: 700; color: var(--teal-accent); min-width: 24px; text-align: center;">&#43;</span>
+            <span class="faq-toggle-symbol">&#43;</span>
           </button>
           <div class="faq-answer-panel">
             <p class="faq-answer-text">
@@ -581,9 +581,9 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="js/products-data.js?v=2.2"></script>
-  <script src="js/store.js?v=2.2"></script>
-  <script src="js/script.js?v=2.2"></script>
-  <script src="js/shop.js?v=2.2"></script>
+  <script src="js/products-data.js?v=2.4"></script>
+  <script src="js/store.js?v=2.4"></script>
+  <script src="js/script.js?v=2.4"></script>
+  <script src="js/shop.js?v=2.4"></script>
 </body>
 </html>
