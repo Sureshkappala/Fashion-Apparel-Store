@@ -20,6 +20,10 @@
   flex-shrink: 0;
   transition: transform 0.35s ease;
   z-index: 1050;
+  position: sticky;
+  top: var(--header-height);
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
 }
 
 .dashboard-user-card {

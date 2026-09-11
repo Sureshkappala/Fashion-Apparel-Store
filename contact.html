@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact &amp; Support Desk — STACKLY</title>
-  <meta name="description" content="Connect with our global offices and client services support desk. Submit an inquiry for institutional services or concierge assistance.">
+  <title>Atelier Concierge &amp; Private Appointments — STACKLY</title>
+  <meta name="description" content="Connect with STACKLY Vérité Atelier concierge. Book private bespoke fittings, styling consultations, and worldwide client assistance.">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,171 +13,237 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/shop.css">
   <style>
-    .contact-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem 5rem;
+    .contact-hero-section {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-light);
+      padding: clamp(3rem, 6vw, 4.5rem) 0;
+      text-align: center;
     }
-    .contact-two-col {
+    .flagships-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+    .flagship-salon-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+    }
+    .flagship-salon-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(56, 178, 154, 0.4);
+      box-shadow: var(--shadow-md);
+    }
+    .flagship-salon-img {
+      aspect-ratio: 16/10;
+      width: 100%;
+      object-fit: cover;
+    }
+    .flagship-salon-body {
+      padding: 1.5rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .flagship-city-title {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      margin-bottom: 0.35rem;
+      color: var(--text-main);
+    }
+    .flagship-address-text {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .flagship-contact-row {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--border-light);
+      font-size: 0.75rem;
+      color: var(--text-light);
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+    .flagship-contact-row a {
+      color: var(--teal-hover);
+      font-weight: 600;
+    }
+    .contact-main-grid {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
-      gap: 2.5rem;
+      gap: 3rem;
       align-items: start;
     }
-    .contact-card-teal {
-      background: #FFFFFF;
-      border: 2px solid #00A884;
-      border-radius: 16px;
-      padding: 2.25rem;
-      box-shadow: 0 8px 30px rgba(0, 168, 132, 0.04);
+    .concierge-info-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: clamp(2rem, 4vw, 2.75rem);
+      box-shadow: var(--shadow-sm);
     }
-    .contact-card-title {
-      font-family: var(--font-sans);
+    .concierge-info-card-title {
+      font-family: var(--font-serif);
       font-size: 1.65rem;
-      font-weight: 700;
-      color: #0F172A;
+      font-weight: 600;
+      color: var(--text-main);
       margin-bottom: 0.5rem;
     }
-    .contact-card-subtitle {
+    .concierge-info-desc {
       font-size: 0.9375rem;
-      color: #64748B;
-      line-height: 1.5;
+      color: var(--text-muted);
+      line-height: 1.6;
       margin-bottom: 2rem;
     }
-    .office-item {
+    .concierge-contact-item {
       display: flex;
       align-items: flex-start;
       gap: 1.25rem;
       margin-bottom: 1.5rem;
     }
-    .office-item:last-child {
+    .concierge-contact-item:last-child {
       margin-bottom: 0;
     }
-    .office-icon-wrap {
+    .concierge-icon-box {
       width: 44px;
       height: 44px;
-      border-radius: 12px;
-      background: rgba(0, 168, 132, 0.1);
-      color: #00A884;
+      border-radius: 50%;
+      background: var(--accent-light);
+      color: var(--accent);
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
-    .office-label {
-      font-size: 1rem;
+    .concierge-item-label {
+      font-size: 0.9375rem;
       font-weight: 700;
-      color: #0F172A;
+      color: var(--text-main);
       margin-bottom: 0.25rem;
     }
-    .office-val {
+    .concierge-item-val {
       font-size: 0.875rem;
-      color: #64748B;
+      color: var(--text-muted);
       line-height: 1.5;
     }
-    .office-val a {
-      color: #00A884;
+    .concierge-item-val a {
+      color: var(--teal-hover);
       font-weight: 600;
-      text-decoration: none;
     }
-    .office-val a:hover {
-      text-decoration: underline;
-    }
-    .map-card-wrap {
-      border: 2px solid #00A884;
-      border-radius: 16px;
+    .map-box-embed {
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
       overflow: hidden;
       margin-top: 2rem;
-      position: relative;
-      background: #0B1320;
-      height: 240px;
+      height: 220px;
     }
-    .map-card-wrap iframe {
+    .map-box-embed iframe {
       width: 100%;
       height: 100%;
       border: 0;
-      filter: invert(90%) hue-rotate(180deg);
     }
-    .map-overlay-badge {
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      background: rgba(15, 23, 42, 0.85);
-      backdrop-filter: blur(4px);
-      color: #FFFFFF;
-      padding: 0.35rem 0.75rem;
-      border-radius: 6px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      z-index: 2;
+    .form-luxury-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: clamp(2rem, 4vw, 2.75rem);
+      box-shadow: var(--shadow-sm);
     }
-    .form-group-custom {
+    .form-group-lux {
       margin-bottom: 1.35rem;
     }
-    .form-label-custom {
+    .form-label-lux {
       display: block;
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: #0F172A;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
       margin-bottom: 0.5rem;
+      text-transform: uppercase;
     }
-    .form-input-custom {
+    .form-input-lux {
       width: 100%;
       padding: 0.85rem 1.15rem;
-      background: #FFFFFF;
-      border: 1px solid #CBD5E1;
-      border-radius: 8px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-sm);
       font-size: 0.9375rem;
-      color: #0F172A;
+      color: var(--text-main);
       outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: all var(--transition-fast);
+      font-family: inherit;
     }
-    .form-input-custom:focus {
-      border-color: #00A884;
-      box-shadow: 0 0 0 3px rgba(0, 168, 132, 0.15);
+    .form-input-lux:focus {
+      border-color: var(--teal-accent);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 3px rgba(56, 178, 154, 0.15);
     }
-    .form-input-custom::placeholder {
-      color: #94A3B8;
+    .services-vip-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 2.5rem;
     }
-    .form-helper-text {
-      font-size: 0.75rem;
-      color: #94A3B8;
-      margin-top: 0.4rem;
+    .service-vip-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all var(--transition-normal);
     }
-    .btn-send-secure {
-      width: 100%;
-      padding: 1rem 1.5rem;
-      background: #00A884;
-      border: none;
-      border-radius: 8px;
-      color: #FFFFFF;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.1s;
-      box-shadow: 0 4px 15px rgba(0, 168, 132, 0.25);
+    .service-vip-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--teal-accent);
+      box-shadow: var(--shadow-md);
     }
-    .btn-send-secure:hover {
-      background: #008F6F;
-      transform: translateY(-1px);
+    .service-vip-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--bg-secondary);
+      color: var(--accent);
+      margin: 0 auto 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .btn-send-secure:active {
-      transform: translateY(0);
+    .service-vip-title {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-main);
     }
-    @media (max-width: 900px) {
-      .contact-two-col {
+    .service-vip-desc {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 992px) {
+      .flagships-grid, .services-vip-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .contact-main-grid {
         grid-template-columns: 1fr;
         gap: 2rem;
       }
     }
+    @media (max-width: 600px) {
+      .flagships-grid, .services-vip-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
-<body style="background: #F8FAFC;">
+<body>
   <!-- Top Announcement Bar -->
   <div class="top-announcement">
     <span>Complimentary worldwide delivery on orders over $300 &bull; Use code <a href="shop.html">STYLE10</a> for 10% off</span>
@@ -309,136 +375,325 @@
     </div>
   </div>
 
-  <!-- Main 2-Column Contact Section -->
-  <main class="contact-container">
-    <div class="contact-two-col">
-      
-      <!-- Left Column: Global Offices & Map -->
-      <div>
-        <div class="contact-card-teal">
-          <h2 class="contact-card-title">Global Offices</h2>
-          <p class="contact-card-subtitle">
-            Our security response and client services teams are active across multiple time zones.
+  <!-- SECTION 1: Editorial Page Header -->
+  <section class="contact-hero-section">
+    <div class="container">
+      <span class="eyebrow">Bespoke Client Services</span>
+      <h1 class="heading-xl">Atelier Concierge &amp; Styling Appointments</h1>
+      <p class="lead-text" style="margin: 0.75rem auto 0;">
+        Connect directly with our master tailors and private fashion stylists across Paris, Milan, New York, and London.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Global Fashion Salons & Flagships -->
+  <section class="section-spacing" style="background: var(--bg-primary);">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">Global Locations</span>
+        <h2 class="heading-lg">Our Flagship Boutiques &amp; Salons</h2>
+        <p class="lead-text" style="margin: 0.75rem auto 0;">
+          Experience tactile private appointments, made-to-measure tailoring, and archival fabric curation.
+        </p>
+      </div>
+
+      <div class="flagships-grid">
+        <!-- Paris -->
+        <div class="flagship-salon-card">
+          <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80&fm=webp" alt="Paris Flagship Boutique" class="flagship-salon-img" loading="lazy">
+          <div class="flagship-salon-body">
+            <h3 class="flagship-city-title">Paris &bull; 8th Arrondissement</h3>
+            <p class="flagship-address-text">
+              42 Avenue Montaigne, 75008 Paris, France
+            </p>
+            <div class="flagship-contact-row">
+              <div><span>Hours:</span> Mon–Sat: 10:00 – 19:30</div>
+              <div><span>Phone:</span> <a href="tel:+33142685500">+33 1 42 68 55 00</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milan -->
+        <div class="flagship-salon-card">
+          <img src="https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=600&q=80&fm=webp" alt="Milan Salon Boutique" class="flagship-salon-img" loading="lazy">
+          <div class="flagship-salon-body">
+            <h3 class="flagship-city-title">Milan &bull; Quadrilatero</h3>
+            <p class="flagship-address-text">
+              Via Monte Napoleone 8, 20121 Milano, Italy
+            </p>
+            <div class="flagship-contact-row">
+              <div><span>Hours:</span> Mon–Sat: 10:00 – 19:00</div>
+              <div><span>Phone:</span> <a href="tel:+390276004411">+39 02 7600 4411</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- New York -->
+        <div class="flagship-salon-card">
+          <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=600&q=80&fm=webp" alt="New York Madison Ave Boutique" class="flagship-salon-img" loading="lazy">
+          <div class="flagship-salon-body">
+            <h3 class="flagship-city-title">New York &bull; Madison Ave</h3>
+            <p class="flagship-address-text">
+              740 Madison Avenue, New York, NY 10065, USA
+            </p>
+            <div class="flagship-contact-row">
+              <div><span>Hours:</span> Mon–Sat: 10:00 – 18:30</div>
+              <div><span>Phone:</span> <a href="tel:+12125550199">+1 (212) 555-0199</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- London -->
+        <div class="flagship-salon-card">
+          <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=600&q=80&fm=webp" alt="London Mayfair Boutique" class="flagship-salon-img" loading="lazy">
+          <div class="flagship-salon-body">
+            <h3 class="flagship-city-title">London &bull; Mayfair</h3>
+            <p class="flagship-address-text">
+              14 Old Bond Street, London W1S 4PP, UK
+            </p>
+            <div class="flagship-contact-row">
+              <div><span>Hours:</span> Mon–Sat: 10:00 – 18:00</div>
+              <div><span>Phone:</span> <a href="tel:+442074938822">+44 20 7493 8822</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Main Bespoke Appointment & Inquiry Form -->
+  <section class="section-spacing" style="background: var(--bg-secondary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="contact-main-grid">
+        
+        <!-- Left Column: Direct Concierge Access -->
+        <div class="concierge-info-card">
+          <h2 class="concierge-info-card-title">Direct Atelier Access</h2>
+          <p class="concierge-info-desc">
+            Our international style advisory and master tailors respond within 12 business hours.
           </p>
 
-          <div class="office-item">
-            <div class="office-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="concierge-contact-item">
+            <div class="concierge-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
             </div>
             <div>
-              <div class="office-label">Headquarters</div>
-              <div class="office-val">
-                MMR Complex, Chinna Thirupathi, Salem, Tamil Nadu 636008, India
+              <div class="concierge-item-label">Central Atelier</div>
+              <div class="concierge-item-val">
+                42 Avenue Montaigne, 75008 Paris, France
               </div>
             </div>
           </div>
 
-          <div class="office-item">
-            <div class="office-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="concierge-contact-item">
+            <div class="concierge-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
             </div>
             <div>
-              <div class="office-label">Support Email</div>
-              <div class="office-val">
-                <a href="mailto:support@stackly.org">support@stackly.org</a>
+              <div class="concierge-item-label">Private Concierge Email</div>
+              <div class="concierge-item-val">
+                <a href="mailto:concierge@stackly.com">concierge@stackly.com</a>
               </div>
             </div>
           </div>
 
-          <div class="office-item">
-            <div class="office-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <div class="concierge-contact-item">
+            <div class="concierge-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
             </div>
             <div>
-              <div class="office-label">Desk Phone</div>
-              <div class="office-val">
+              <div class="concierge-item-label">Global Toll-Free Desk</div>
+              <div class="concierge-item-val">
                 <a href="tel:+18005557233">+1 (800) 555-SAFE</a>
               </div>
             </div>
           </div>
 
-          <div class="office-item">
-            <div class="office-icon-wrap">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-            </div>
-            <div>
-              <div class="office-label">Office Hours</div>
-              <div class="office-val">
-                Mon - Fri: 08:00 - 18:00 (IST / UTC +5.5)
-              </div>
-            </div>
+          <!-- Location Map Embed -->
+          <div class="map-box-embed">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.498114400495!2d2.304899576884067!3d48.86779437133379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fcd5f75646f%3A0xe1db040c5f47a6d8!2sAv.%20Montaigne%2C%2075008%20Paris%2C%20France!5e0!3m2!1sen!2sfr!4v1700000000000!5m2!1sen!2sfr" 
+              title="Paris Atelier Location Map" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
           </div>
         </div>
 
-        <!-- Google Map Embed Card -->
-        <div class="map-card-wrap">
-          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="map-overlay-badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            <span>Open in Maps</span>
-          </a>
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.3995874288673!2d78.16335197587824!3d11.66601424217112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf03889025075%3A0xe5a36371cb0a4306!2sSalem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-            title="Global Office Location Map" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- Right Column: Submit Inquiry Form Card -->
-      <div>
-        <div class="contact-card-teal">
-          <h2 class="contact-card-title">Submit Inquiry</h2>
-          <p class="contact-card-subtitle">
-            Required fields are marked (*). Enter your details accurately.
+        <!-- Right Column: Bespoke Appointment & Inquiry Form -->
+        <div class="form-luxury-card">
+          <h2 class="concierge-info-card-title">Book a Private Appointment</h2>
+          <p class="concierge-info-desc">
+            Complete the form below to schedule a private salon fitting, bespoke made-to-measure consultation, or order assistance.
           </p>
 
           <form id="contactForm" novalidate>
-            <div class="form-group-custom">
-              <label for="cName" class="form-label-custom">Full Name *</label>
-              <input type="text" id="cName" class="form-input-custom" placeholder="John Doe" required autocomplete="name">
-              <div class="form-helper-text">Letters and spaces only (numbers are strictly blocked).</div>
+            <div class="form-group-lux">
+              <label for="cName" class="form-label-lux">Full Name *</label>
+              <input type="text" id="cName" class="form-input-lux" placeholder="e.g. Eleanor Vance" required autocomplete="name">
             </div>
 
-            <div class="form-group-custom">
-              <label for="cEmail" class="form-label-custom">Email Address *</label>
-              <input type="email" id="cEmail" class="form-input-custom" placeholder="USERNAME@GMAIL.COM" required autocomplete="email">
+            <div class="form-group-lux">
+              <label for="cEmail" class="form-label-lux">Email Address *</label>
+              <input type="email" id="cEmail" class="form-input-lux" placeholder="client@domain.com" required autocomplete="email">
             </div>
 
-            <div class="form-group-custom">
-              <label for="cMobile" class="form-label-custom">Mobile Number *</label>
-              <input type="tel" id="cMobile" class="form-input-custom" placeholder="Numbers only (e.g. 10 digits)" required autocomplete="tel">
-              <div class="form-helper-text">Digits only (letters are strictly blocked).</div>
+            <div class="form-group-lux">
+              <label for="cMobile" class="form-label-lux">Telephone Number *</label>
+              <input type="tel" id="cMobile" class="form-input-lux" placeholder="+1 (555) 000-0000" required autocomplete="tel">
             </div>
 
-            <div class="form-group-custom">
-              <label for="cSubject" class="form-label-custom">Subject</label>
-              <input type="text" id="cSubject" class="form-input-custom" placeholder="Audits, Wallet Setup, Institutional">
+            <div class="form-group-lux">
+              <label for="cSubject" class="form-label-lux">Service Requested</label>
+              <select id="cSubject" class="form-input-lux" style="cursor: pointer;">
+                <option value="Made-to-Measure Tailoring">Made-to-Measure Tailoring</option>
+                <option value="Private Salon Styling Appointment">Private Salon Styling Appointment</option>
+                <option value="Order &amp; Global Shipping Inquiry">Order &amp; Global Shipping Inquiry</option>
+                <option value="Archival Fabric Care &amp; Alterations">Archival Fabric Care &amp; Alterations</option>
+                <option value="VIP Patron Services">VIP Patron Services</option>
+              </select>
             </div>
 
-            <div class="form-group-custom">
-              <label for="cMessage" class="form-label-custom">Message *</label>
-              <textarea id="cMessage" class="form-input-custom" rows="5" placeholder="Enter details..." required></textarea>
+            <div class="form-group-lux">
+              <label for="cMessage" class="form-label-lux">Appointment Notes &amp; Requests *</label>
+              <textarea id="cMessage" class="form-input-lux" rows="5" placeholder="Please specify your preferred date, salon location (Paris, Milan, NYC, London), or bespoke sizing notes..." required></textarea>
             </div>
 
-            <button type="submit" class="btn-send-secure">Send Secure Message</button>
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.1rem;">
+              Submit Appointment Request &rarr;
+            </button>
           </form>
         </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: VIP Concierge Services -->
+  <section class="section-spacing" style="background: var(--bg-primary);">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">Dedicated Attention</span>
+        <h2 class="heading-lg">Complimentary Patron Services</h2>
+        <p class="lead-text" style="margin: 0.75rem auto 0;">
+          Every STACKLY creation is accompanied by our lifetime commitment to craftsmanship and individual attention.
+        </p>
       </div>
 
+      <div class="services-vip-grid">
+        <div class="service-vip-card">
+          <div class="service-vip-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="service-vip-title">Master Tailoring</h3>
+          <p class="service-vip-desc">
+            Personal precision sleeve, hem, and waist alterations performed by our in-house Parisian artisans.
+          </p>
+        </div>
+
+        <div class="service-vip-card">
+          <div class="service-vip-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+          </div>
+          <h3 class="service-vip-title">Express Courier</h3>
+          <p class="service-vip-desc">
+            Carbon-neutral express worldwide delivery with all duties, customs, and taxes fully prepaid.
+          </p>
+        </div>
+
+        <div class="service-vip-card">
+          <div class="service-vip-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3 class="service-vip-title">Archival Preservation</h3>
+          <p class="service-vip-desc">
+            Complimentary seasonal garment refreshment, eco-friendly cleaning guidance, and button repairs.
+          </p>
+        </div>
+
+        <div class="service-vip-card">
+          <div class="service-vip-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          </div>
+          <h3 class="service-vip-title">Virtual Styling</h3>
+          <p class="service-vip-desc">
+            One-on-one virtual styling sessions with our European directors to curate your capsule wardrobe.
+          </p>
+        </div>
+      </div>
     </div>
-  </main>
+  </section>
+
+  <!-- SECTION 5: Client Assistance FAQ Accordion -->
+  <section class="section-spacing" style="background: var(--bg-secondary); border-top: 1px solid var(--border-light);">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">Client Assistance</span>
+        <h2 class="heading-lg">Appointment &amp; Concierge Inquiries</h2>
+        <p class="lead-text" style="margin: 0.75rem auto 0;">
+          Everything you need to know about scheduling, bespoke orders, and visiting our salons.
+        </p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item active">
+          <button class="faq-question-btn" type="button">
+            <span>How far in advance should I schedule a private salon fitting?</span>
+            <span class="faq-toggle-symbol" style="font-size: 1.25rem; font-weight: 700; color: var(--teal-accent);">&minus;</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p class="faq-answer-text">
+              We recommend scheduling salon appointments at least 48 to 72 hours in advance. For made-to-measure tailored coats or bridal eveningwear, booking 1–2 weeks prior allows our master cutters to prepare fabric rolls and personalized pattern silhouettes.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" type="button">
+            <span>Do you offer bespoke alterations for pieces purchased online?</span>
+            <span class="faq-toggle-symbol" style="font-size: 1.25rem; font-weight: 700; color: var(--teal-accent);">&#43;</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p class="faq-answer-text">
+              Yes. All online garment purchases include complimentary minor alterations (hem adjustment, sleeve lengthening or shortening) at any of our flagship salons or via our pre-paid courier alteration program.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" type="button">
+            <span>What happens during a Virtual Styling Consultation?</span>
+            <span class="faq-toggle-symbol" style="font-size: 1.25rem; font-weight: 700; color: var(--teal-accent);">&#43;</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p class="faq-answer-text">
+              During your 45-minute virtual video session, our stylists will review your sizing measurements, discuss fabric tactile qualities, and present tailored capsule combinations designed to effortlessly integrate into your existing wardrobe.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question-btn" type="button">
+            <span>How does STACKLY handle international customs and returns?</span>
+            <span class="faq-toggle-symbol" style="font-size: 1.25rem; font-weight: 700; color: var(--teal-accent);">&#43;</span>
+          </button>
+          <div class="faq-answer-panel">
+            <p class="faq-answer-text">
+              All duties and import taxes are 100% prepaid by STACKLY at checkout. We provide a 30-day complimentary return and exchange window with pre-printed carbon-neutral return labels included inside every shipment box.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Global Site Footer -->
   <footer class="site-footer">

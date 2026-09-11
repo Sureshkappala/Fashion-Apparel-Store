@@ -115,25 +115,52 @@ function initUserDashboard() {
 
 function renderUserOrders() {
   const tbody = document.getElementById("userOrdersTableBody");
-  if (!tbody) return;
+  const tbody2 = document.getElementById("userOrdersTableBody2");
+  if (!tbody && !tbody2) return;
 
   const orders = typeof Store !== "undefined" ? Store.getOrders() : [];
-  if (orders.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: var(--text-muted); padding: 2rem;">No orders placed yet.</td></tr>`;
-    return;
+
+  if (tbody) {
+    if (orders.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="5" style="text-align: center; color: var(--text-muted); padding: 2rem;">No orders placed yet.</td></tr>`;
+    } else {
+      tbody.innerHTML = orders.map(order => `
+        <tr>
+          <td><strong>${order.id}</strong></td>
+          <td>${order.date}</td>
+          <td>${order.itemsCount} ${order.itemsCount === 1 ? 'item' : 'items'}</td>
+          <td><strong>$${order.total}.00</strong></td>
+          <td>
+            <span class="status-badge ${order.status.toLowerCase().replace(' ', '-')}">${order.status}</span>
+          </td>
+        </tr>
+      `).join('');
+    }
   }
 
-  tbody.innerHTML = orders.map(order => `
-    <tr>
-      <td><strong>${order.id}</strong></td>
-      <td>${order.date}</td>
-      <td>${order.itemsCount} ${order.itemsCount === 1 ? 'item' : 'items'}</td>
-      <td><strong>$${order.total}.00</strong></td>
-      <td>
-        <span class="status-badge ${order.status.toLowerCase().replace(' ', '-')}">${order.status}</span>
-      </td>
-    </tr>
-  `).join('');
+  if (tbody2) {
+    if (orders.length === 0) {
+      tbody2.innerHTML = `<tr><td colspan="6" style="text-align: center; color: var(--text-muted); padding: 2rem;">No orders placed yet.</td></tr>`;
+    } else {
+      tbody2.innerHTML = orders.map(order => `
+        <tr>
+          <td><strong>${order.id}</strong></td>
+          <td>${order.date}</td>
+          <td>${order.itemsCount} ${order.itemsCount === 1 ? 'item' : 'items'}</td>
+          <td><strong>$${order.total}.00</strong></td>
+          <td>
+            <span class="status-badge ${order.status.toLowerCase().replace(' ', '-')}">${order.status}</span>
+          </td>
+          <td>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button class="btn btn-secondary" onclick="if(typeof Store!=='undefined') Store.showToast('Generating official tax receipt for ${order.id}...');" style="font-size: 0.72rem; padding: 0.35rem 0.65rem;">Receipt</button>
+              <a href="#" onclick="document.querySelector('[data-tab=tab-tracking]').click();" class="btn btn-primary" style="font-size: 0.72rem; padding: 0.35rem 0.65rem;">Track</a>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+  }
 }
 
 function renderUserWishlist() {

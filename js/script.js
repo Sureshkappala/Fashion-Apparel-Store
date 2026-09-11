@@ -425,6 +425,17 @@ window.openSizeGuideModal = function() {
    -------------------------------------------------------------------------- */
 function initFaqAccordions() {
   const faqItems = document.querySelectorAll(".faq-item");
+  if (!faqItems.length) return;
+
+  function updateFaqSymbols() {
+    faqItems.forEach(i => {
+      const sym = i.querySelector(".faq-toggle-symbol");
+      if (sym) {
+        sym.innerHTML = i.classList.contains("active") ? "&minus;" : "&#43;";
+      }
+    });
+  }
+
   faqItems.forEach(item => {
     const btn = item.querySelector(".faq-question-btn");
     if (btn) {
@@ -434,8 +445,11 @@ function initFaqAccordions() {
         if (!isOpen) {
           item.classList.add("active");
         }
+        updateFaqSymbols();
       });
     }
   });
+
+  updateFaqSymbols();
 }
 

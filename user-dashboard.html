@@ -85,7 +85,8 @@
         <div class="dashboard-header-bar">
           <div>
             <span class="eyebrow">Client Overview</span>
-            <h1 class="heading-md">Bonjour, Eleanor</h1>
+            <h1 class="heading-md" id="userGreetingTitle">Bonjour, Eleanor Vance</h1>
+            <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.25rem;">Welcome to your private atelier patron portal. Track your wardrobe capsules and bespoke orders.</p>
           </div>
           <a href="shop.html" class="btn btn-primary">Discover New Arrivals</a>
         </div>
@@ -193,18 +194,46 @@
       <!-- Tab 2: Orders -->
       <section class="dashboard-tab-pane" id="tab-orders" style="display: none;">
         <div class="dashboard-header-bar">
-          <div><span class="eyebrow">Order History</span><h1 class="heading-md">All Placed Orders</h1></div>
+          <div>
+            <span class="eyebrow">Order History</span>
+            <h1 class="heading-md">My Patron Orders &amp; Receipts</h1>
+            <p style="color: var(--text-muted); font-size: 0.875rem; margin-top: 0.25rem;">Review complete purchase records, courier tracking numbers, and bespoke tailoring summaries.</p>
+          </div>
+          <a href="shop.html" class="btn btn-primary">+ Place New Order</a>
         </div>
-        <div class="dashboard-card">
+
+        <div class="dashboard-card" style="margin-bottom: 2rem;">
+          <div class="dashboard-card-title">
+            <span>All Wardrobe Orders (6)</span>
+            <span style="font-size: 0.8125rem; color: var(--teal-hover); font-weight: 600;">● Real-time sync</span>
+          </div>
           <div class="dashboard-table-wrap">
             <table class="dashboard-table">
               <thead>
-                <tr><th>Order ID</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th></tr>
+                <tr>
+                  <th>Order ID</th>
+                  <th>Date</th>
+                  <th>Items</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
               </thead>
               <tbody id="userOrdersTableBody2">
                 <!-- Rendered by dashboard.js -->
               </tbody>
             </table>
+          </div>
+        </div>
+
+        <!-- Order Inquiries & Assistance Strip -->
+        <div class="dashboard-card" style="border-left: 3px solid var(--teal-accent); background: var(--bg-card);">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <h3 style="font-family: var(--font-serif); font-size: 1.15rem; margin-bottom: 0.25rem;">Need Sizing Adjustments or Alterations?</h3>
+              <p style="font-size: 0.875rem; color: var(--text-muted);">All garments include 30-day complimentary atelier tailoring and master artisan fittings.</p>
+            </div>
+            <a href="contact.html" class="btn btn-secondary" style="font-size: 0.75rem; padding: 0.6rem 1.25rem;">Contact Atelier Stylist</a>
           </div>
         </div>
       </section>
