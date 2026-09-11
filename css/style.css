@@ -2795,46 +2795,63 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.85rem;
   }
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.65rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem 0.5rem !important;
   }
   .product-card {
     border-radius: 6px;
   }
   .badge-tag {
-    top: 0.4rem;
-    left: 0.4rem;
-    font-size: 0.55rem;
-    padding: 0.2rem 0.45rem;
-    letter-spacing: 0.08em;
+    top: 0.35rem;
+    left: 0.35rem;
+    font-size: 0.52rem;
+    padding: 0.2rem 0.4rem;
+    letter-spacing: 0.06em;
+    max-width: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .wishlist-toggle-btn {
-    top: 0.4rem;
-    right: 0.4rem;
-    width: 28px;
-    height: 28px;
+    top: 0.35rem;
+    right: 0.35rem;
+    width: 26px;
+    height: 26px;
   }
   .wishlist-toggle-btn svg {
-    width: 14px;
-    height: 14px;
+    width: 13px;
+    height: 13px;
   }
   .product-info {
-    padding: 0.75rem 0.5rem;
+    padding: 0.65rem 0.4rem;
   }
   .product-title {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
   }
   .product-price {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
-  .product-card-actions {
+  .product-actions-bar {
+    transform: translateY(0);
     opacity: 1;
-    bottom: 0.4rem;
-    right: 0.4rem;
+    padding: 0.35rem;
+    gap: 0.35rem;
+    background: rgba(255, 255, 255, 0.95);
   }
-  .card-action-btn {
-    width: 32px;
-    height: 32px;
+  .btn-quick-add {
+    font-size: 0.62rem;
+    padding: 0.35rem 0.25rem;
+    letter-spacing: 0.03em;
+  }
+  .btn-quick-view {
+    width: 26px;
+    height: 26px;
+  }
+  .btn-quick-view svg {
+    width: 13px;
+    height: 13px;
   }
   .category-grid {
     grid-template-columns: 1fr;
